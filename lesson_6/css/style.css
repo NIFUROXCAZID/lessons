@@ -1,0 +1,148 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Inter&family=Poppins:wght@400;600&display=swap');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Ручне підключення */
+/* @import url('fonts.css'); */
+
+/* Основні стилі */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.header_container {
+}
+.main_container {
+}
+.part_1-container {
+    max-width: 692px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image_container {
+    margin-bottom: 37px;
+}
+.meeting-img {
+    max-width: 692px;
+}
+.text_container {
+    margin-bottom: 40px;
+}
+.business_title {
+    color: #37393f;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.27;
+    height: 86px;
+}
+.business_paragraph {
+    color: #7d7d7d;
+
+    line-height: 1.46; /* 26.314px */
+    margin-bottom: 42px;
+}
+.business_title-2 {
+    color: #6b77e5;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27; /* 25.4px */
+    height: 54px;
+    margin-bottom: 12px;
+}
+.business_paragraph-2 {
+    color: #7d7d7d;
+    line-height: 1.46; /* 26.314px */
+}
+.image_list-container {
+}
+
+.computer-img {
+    max-width: 346px;
+    min-height: 266px;
+}
+.list_container {
+    display: inline-block;
+    max-width: 45%;
+    margin-left: 29px;
+}
+.benefits_title {
+    color: #37393f;
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.27; /* 31.75px */
+    margin-bottom: 15px;
+}
+.benefits_description {
+    color: #40ddb6;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27; /* 25.4px */
+    margin-bottom: 21px;
+}
+.benefits_list-elem {
+    color: #7d7d7d;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+.part_2-container {
+    max-width: 1169px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text_container-2 {
+    display: inline-block;
+    max-width: 563px;
+}
+.we-do_title {
+    color: #d06b00;
+    font-size: 28px;
+    line-height: normal;
+    margin: 21px 0 13px 0;
+}
+.custom_jevels {
+    color: #0e333d;
+    font-family: DM Serif Text;
+    font-size: 59px;
+    line-height: 1.46; /* 86.435px */
+    margin-bottom: 25px;
+}
+.custom_jevels-paragraph {
+    color: #474747;
+    font-size: 20px;
+    line-height: 1.8; /* 36px */
+}
+.images_container {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+.earring-1{
+    width: 273px;
+    height: 518px;
+}
+.earring-2{
+    width: 273px;
+    height: 518px;
+    margin-left: 22px;
+}
+.part_3-experiment-container {
+
+}
+.text_paragraf-1 {
+    overflow: scroll;
+}
+.text_paragraf-2 {
+    overflow: auto;
+}
+.images_container-2 {
+    padding: 15px;
+}
