@@ -1,0 +1,440 @@
+/* Підключення шрифтів */
+@import url('fonts.css');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Основні стилі */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: #7d7d7d;
+    line-height: 1.46; /* 26.314px */
+}
+.header_container {
+    max-width: 856px;
+    max-height: 915px;
+    margin: auto;
+}
+.main_container {
+    padding-bottom: 100px;
+}
+/* ДЗ МАКЕТ №1 ====================================================================================================*/
+.busness-plan_container {
+    max-width: 1094px;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 100px;
+}
+.busness-text_container {
+    max-width: 673px;
+}
+.wellcome_container {
+    margin-bottom: 16px;
+}
+.square {
+    width: 12px;
+    height: 12px;
+    background: #40ddb6;
+    display: inline-block;
+}
+.wellcome_text {
+    color: #37393F;
+    font-weight: 500;
+    display: inline-block;
+}
+.busness-title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.21; /* 48.4px */
+    margin-bottom: 14px;
+    max-width: 420px;
+}
+.busness-text-1 {
+    margin-bottom: 20px;
+}
+.busness-text-2 {
+    margin-bottom: 50px;
+}
+.purpose_container-1 {
+    border: 1px solid #E3E3E3;
+    margin-bottom: 31px;
+    padding: 28px 41px 28px 38px;
+    max-width: 675px;
+}
+.purpose_container-2 {
+    border: 1px solid #E3E3E3;
+    margin-bottom: 48px;
+    padding: 28px 41px 28px 38px;
+    max-width: 685px;
+}
+.purpose_text-container {
+}
+.purpose_title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    background: url(../img/Confirm.svg) 0px 0px no-repeat;
+    padding-left: 46px;
+    margin-bottom: 14px;
+
+}
+.purpose_text {
+    padding-left: 46px;
+}
+.about-us {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 21px 35px 22px 35px;
+    background: #6B77E5;
+}
+/* ДЗ МАКЕТ №2 ====================================================================================================*/
+.latest_project-container {
+    max-width: 1920px;
+    max-height: 1718px;
+    margin: auto;
+    padding-top: 150px;
+}
+
+.title-container {
+    max-width: 852px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 48px;
+}
+.latest_projects {
+    margin-bottom: 16px;
+}
+.square {
+    width: 12px;
+    height: 12px;
+    background: #40ddb6;
+    display: inline-block;
+}
+.latest_projects-title {
+    color: #37393F;
+    font-family: Inter;
+    font-weight: 500;
+    display: inline-block;
+}
+.discover-projects {
+    color: #37393F;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.21; /* 48.4px */
+    margin-bottom: 16px;
+}
+.discover-projects_description {
+    color: #7D7D7D;
+    line-height: 1.46; /* 26.314px */
+}
+.projects-container {
+    text-align: center;
+}
+.projects-rov-1 {
+    font-size: 0px;
+    margin-bottom: 58px;
+}
+.project {
+    display: inline-block;
+    max-width: 384px;
+    margin-left: 34px;
+}
+.project_image-1 {
+    margin-bottom: 25px;
+    width: 384px;
+    height: 501px;
+    background-image: url(../img/project_image-1.png);
+}
+.project_image-2 {
+    margin-bottom: 25px;
+    width: 384px;
+    height: 501px;
+    background-image: url(../img/project_image-2.png);
+}
+.project_image-3 {
+    margin-bottom: 25px;
+    width: 384px;
+    height: 501px;
+    background-image: url(../img/project_image-3.png);
+}
+.project_image-4 {
+    margin-bottom: 25px;
+    width: 384px;
+    height: 501px;
+    background-image: url(../img/project_image-4.png);
+}
+.project_image-5 {
+    margin-bottom: 25px;
+    width: 384px;
+    height: 501px;
+    background-image: url(../img/project_image-5.png);
+}
+.project_image-6 {
+    margin-bottom: 25px;
+    width: 384px;
+    height: 501px;
+    background-image: url(../img/project_image-6.png);
+}
+.project_details {
+    text-align: left;
+}
+.project_title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27; /* 25.4px */
+    margin-bottom: 12px;
+    display: block;
+}
+.project_date {
+    color: #7D7D7D;
+    font-size: 14px;
+    background: url(../img/Calendar-blue.svg) 0 -1px no-repeat;
+    padding-left: 25px;
+}
+.projects-rov-2 {
+    font-size: 0px;
+}
+
+/* ДЗ МАКЕТ №3 ====================================================================================================*/
+.clothing_container {
+    max-width: 1240px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding-left: 26px;
+}
+.title_container {
+    height: 31px;
+    width: 550px;
+    /* margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: -26px; */
+    margin: 100px 0 30px -26px;
+}
+.purple_thing {
+    width: 6px;
+    height: 28px;
+    display: inline-block;
+    border-radius: 10px;
+    background: #8a33fd;
+}
+.clothing_title {
+    color: #3c4242;
+    font-family: 'Core Sans C', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.19; /* 119.643% */
+    letter-spacing: 0.56px;
+    padding-left: 12px;
+    max-width: 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+.clothing_collection_title-1 {
+    color: #807d7e;
+    font-family: 'Core Sans C', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.675; /* 167.5% */
+    letter-spacing: 0.4px;
+    margin-bottom: 27px;
+
+}
+.clothing_collection_text-1 {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.675; /* 167.5% */
+    letter-spacing: 0.4px;
+    margin-bottom: 22px;
+
+}
+.clothing_collection_text-1 a {
+    color: #807d7e;
+    font-weight: 700;
+}
+.clothing_collection_text-2 {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.675; /* 167.5% */
+    letter-spacing: 0.4px;
+    margin-bottom: 27px;
+
+}
+.clothing_collection_title-2 {
+    color: #807d7e;
+    font-family: 'Core Sans C', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.675; /* 167.5% */
+    letter-spacing: 0.4px;
+    margin-bottom: 27px;
+
+}
+.clothing_collection_text-3,
+.clothing_collection_text-4,
+.clothing_collection_text-3 a {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.675; /* 167.5% */
+    letter-spacing: 0.4px;
+    margin-bottom: 22px;
+
+}
+.clothing_collection_text-3 a {
+    font-weight: 700;
+    margin-left: 0px;
+}
+.clothing_collection_title-3 {
+    color: #807d7e;
+    font-family: 'Core Sans C', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.675; /* 167.5% */
+    letter-spacing: 0.4px;
+
+}
+/* ДЗ МАКЕТ №4 ====================================================================================================*/
+.shop_now-container {
+    /* max-width: 1440px; */
+    /* max-height: 835px; */
+    /* margin: auto; */
+    text-align: center;
+    font-size: 0px;
+    margin-bottom: 150px;
+}
+.backgroud-1-left {
+    background-image: url(../img/Leaves.png);
+    width: 613.997px;
+    height: 639.723px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    
+}
+.content_container {
+    margin-top: 184px;
+    margin-left: 74px;
+}
+.shop_now-title {
+    color: #FFF;
+    font-family: 'Core Sans C', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.47; /* 147.059% */
+    letter-spacing: 0.208px;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+.shop_now-text {
+    color: #FFF;
+    font-family: Causten;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
+    max-width: 452px;
+    margin-bottom: 50px;
+}
+.shop-now {
+    padding: 14px 44px 14px 44px;
+    color: #3C4242;
+    text-align: center;
+    font-family: Causten;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 18px;
+}
+.backgroud-right {
+    width: 626.003px;
+    height: 639.723px;
+    background-image: url(../img/Dudes.png);
+    display: inline-block;
+}
+
+/* ДЗ ЕКСПЕРЕМЕНТИ ====================================================================================================*/
+.experiment_container {
+    padding-top: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    font-weight: 600;
+    font-size: 30px;
+    color: #3C4242;
+
+    background-color: #d2d2d2;
+}
+.experiments_title {
+}
+.background-1 {
+    width: 1280px;
+    height: 720px;
+    background-image: url("../img/bg-1.jpg");
+    background-size: contain;
+}
+.background-2 {
+    width: 1280px;
+    height: 720px;
+    background-image: linear-gradient(55.95deg, #FF3F3A 0%, #1100ff 100%);
+}
+.background-3 {
+    width: 1280px;
+    height: 720px;
+    background: url("../img/bg-3.png") no-repeat 0 0 / 200px, linear-gradient(55.95deg, rgba(255, 64, 58, 0.3) 0%, rgba(5, 247, 126, 0.3) 100%), url("../img/bg-4.png") no-repeat right top / 800px;
+}
+.background_3-1 {
+    width: 1280px;
+    height: 720px;
+    background: url('../img/amogus.png') 0 0 no-repeat;
+    background-attachment: fixed;
+}
+.background-4 {
+    width: 1280px;
+    height: 720px;
+    background-image: url("../img/bg-1.jpg");
+    background-size: cover;
+}
+.background-5 {
+    width: 1280px;
+    height: 1720px;
+    background-image: url("../img/amogus.png");
+    background-repeat: round;
+}
+
+.background-6 {
+    width: 1280px;
+    height: 720px;
+    background-image: url("../img/amogus.png");
+
+}
+.dispair {
+    width: 1280px;
+    height: 720px;
+    font-size: 30px;
+    font-weight: 800;
+    background-image: url("../img/sad-cat.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #FF3F3A;
+    background-position: 50% 50%;
+}
