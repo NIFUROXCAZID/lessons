@@ -1,0 +1,603 @@
+/* Підключення шрифтів */
+@import url('fonts.css');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Основні стилі */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: #7d7d7d;
+    line-height: 1.46; /* 26.314px */
+}
+.header_container {
+    max-width: 856px;
+    max-height: 915px;
+    margin: auto;
+}
+.main_container {
+    padding-bottom: 100px;
+}
+/* ДЗ ПРАКТИКУВАННЯ ВЛАСТИВОСТЕЙ ==================================================================================*/
+.practise-container {
+    padding-top: 100px;
+    color: #151515;
+}
+.practise-container h2{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.block-1 {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #a1e89f;
+}
+.block-1 p {
+    display: none;
+}
+.block-1:hover p {
+    /* Прикольно запомнить */
+    display: block;
+}
+.block-2 {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #a09fe8;
+}
+.block-2:active  {
+    background-color: rgb(255, 0, 0);
+}
+.block-2:active p {
+    color: rgb(40, 9, 143);
+}
+.block-2 a:visited {
+    color: rgb(91, 0, 182);
+}
+.block-3 {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #99ae3c;
+    display: none;
+}
+.block-3 a:focus {
+    outline: 2px solid red;
+}
+.block-3:target {
+	display: block;
+}
+.block-4 {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #dcf900;
+}
+.block-4 p:first-of-type {
+    color: #ff0000;
+}
+.block-4 p:nth-child(3) {
+    color: #ffd000;
+}
+.block-4 p:last-child {
+    color: #00ff11;
+}
+.block-5 {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #0800f9;
+}
+.block-5 p:nth-child(even) {
+    color: #ff0000;
+}
+.block-5 p:not(:last-child) {
+    margin-left: 25px;
+}
+.block-6 {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #c3f900;
+}
+.block-6 span::before {
+    content: "ඞඞඞ";
+}
+.block-6 span::after {
+    content: "ඞඞඞ";
+}
+/*  */
+.block-6 li::before {
+	background: url('../img/Confirm.svg') 0 0 no-repeat;
+	content: "";
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 10px;
+	/* властивість transition ми ще не вивчали, вона надана лише для прикладу */
+	transition: all 0.8s ease 0s;
+} 
+
+/*  */
+.block-6 li:hover::before {
+/* властивість transform ми ще не вивчали, вона надана лише для прикладу */
+	transform: scale(1.5);
+}
+/* ДЗ ГРА ДІЙДИ ДО КІНЦЯ ==========================================================================================*/
+.game-container {
+    max-width: 1100px;
+    margin: auto;
+}
+.game {
+	min-height: 650px;
+	text-align: initial;
+	margin-top: 30px;
+	font-size: 0;
+}
+
+.game__line-1 {
+	width: 200px;
+	height: 50px;
+    background-color: rgb(255, 0, 0);
+}
+.game__line-2 {
+	/* display: block; */
+	width: 50px;
+	height: 200px;
+    background-color: rgb(255, 136, 0);
+    margin-left: 150px;
+    visibility: hidden;
+}
+.game__line-1:hover ~ .game__line-2,
+.game__line-2:hover {
+	visibility: visible;
+}
+.game__line-3 {
+    width: 200px;
+	height: 50px;
+    background-color: rgb(251, 255, 0);
+    margin-left: 25px;
+    margin-left: 150px;
+    visibility: hidden;
+}
+.game__line-2:hover ~ .game__line-3,
+.game__line-3:hover {
+	visibility: visible;
+}
+.game__line-4 {
+    width: 50px;
+	height: 200px;
+    background-color: rgb(153, 255, 0);
+    margin-left: 300px;
+    visibility: hidden;
+}
+.game__line-3:hover ~ .game__line-4,
+.game__line-4:hover {
+	visibility: visible;
+}
+.game__line-5 {
+    width: 200px;
+	height: 50px;
+    background-color: rgb(13, 255, 0);
+    margin-left: 300px;
+    visibility: hidden;
+}
+.game__line-4:hover ~ .game__line-5,
+.game__line-5:hover {
+	visibility: visible;
+}
+.game__line-6 {
+    width: 50px;
+	height: 150px;
+    background-color: rgb(0, 255, 153);
+    margin-left: 450px;
+    visibility: hidden;
+}
+.game__line-5:hover ~ .game__line-6,
+.game__line-6:hover {
+	visibility: visible;
+}
+.game__line-7 {
+    width: 150px;
+	height: 50px;
+    background-color: rgb(0, 255, 204);
+    margin-left: 450px;
+    visibility: hidden;
+}
+.game__line-6:hover ~ .game__line-7,
+.game__line-7:hover {
+	visibility: visible;
+}
+.game__line-8 {
+    width: 50px;
+	height: 200px;
+    background-color: rgb(0, 191, 255);
+    margin-left: 550px;
+    visibility: hidden;
+}
+.game__line-7:hover ~ .game__line-8,
+.game__line-8:hover {
+	visibility: visible;
+}
+.game__line-9 {
+    width: 400px;
+	height: 50px;
+    background-color: rgb(0, 102, 255);
+    margin-left: 550px;
+    visibility: hidden;
+}
+.game__line-8:hover ~ .game__line-9,
+.game__line-9:hover {
+	visibility: visible;
+}
+.game__line-10 {
+    width: 50px;
+	height: 200px;
+    background-color: rgb(47, 0, 255);
+    margin-left: 900px;
+    visibility: hidden;
+}
+.game__line-9:hover ~ .game__line-10,
+.game__line-10:hover {
+	visibility: visible;
+}
+.game__line-11 {
+    width: 100%;
+	height: 150px;
+    background-color: rgb(255, 0, 238);
+    visibility: hidden;
+}
+.game__line-10:hover ~ .game__line-11,
+.game__line-11:hover {
+	visibility: visible;
+}
+.game-screamer {
+	visibility: hidden;
+	text-align: center;
+    background: url("../img/walter-glitch.gif") 0 0 / contain no-repeat;
+	height: 500px;
+    width: 500px;
+}
+.game__line-11:hover ~ .game-screamer,
+.game-screamer:hover {
+	visibility: visible;
+}
+
+/* ДЗ МАКЕТ №1 ====================================================================================================*/
+.international_bussness-container {
+    padding-top: 37px;
+    max-width: 692px;
+    margin: auto;
+}
+.international_bussness-title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.27; /* 38.1px */
+}
+.international_bussness-title, .marg_1 {
+    margin-bottom: 20px;
+}
+.international_bussness-title, .marg_2 {
+    margin-bottom: 10px;
+}
+.international_bussness-text-1:nth-child(2) {
+    margin-bottom: 42px;
+}
+.international_bussness-text-1:nth-child(4) {
+    margin-bottom: 42px;
+}
+.international_bussness-text-2 {
+    color: #6B77E5;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.27; /* 25.4px */
+    margin-bottom: 12px;
+}
+.benefits-plant_container {
+    margin-bottom: 52px;
+}
+.plant-img {
+    max-width: 398px;
+    max-height: 265px;
+}
+.benefits_container {
+    margin-left: 29px;
+    display: inline-block;
+    max-width: 320px;
+}
+.benefits_title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.27; /* 31.75px */
+    margin-bottom: 15px;
+}
+.benefits_text {
+    color: #40DDB6;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.27; /* 25.4px */
+    margin-bottom: 21px;
+}
+.benefits_list {
+}
+.benefits_list-item {
+    margin-bottom: 30px;
+}
+.benefits_list-item:last-child {
+    margin-bottom: 0px;
+}
+.benefits_list-item::before {
+    content: "";
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    margin-right: 8px;
+    background: url(../img/Confirm.svg) 0 0 no-repeat;
+    /* vertical-align: middle; */
+    margin-bottom: -6px;
+}
+/* ДЗ МАКЕТ №2 ====================================================================================================*/
+.busness-plan_container {
+    max-width: 1094px;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+.busness-text_container {
+    max-width: 673px;
+    margin-bottom: 50px;
+}
+.wellcome_text {
+    color: #37393F;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.wellcome_text::before {
+    content: "";
+    display: inline-block;
+    margin-right: 6px;
+    height: 12px;
+    width: 12px;
+    background-color: #40DDB6;
+}
+.busness-title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.21; /* 48.4px */
+    margin-bottom: 14px;
+    max-width: 420px;
+}
+.busness-text {
+    margin-bottom: 20px;
+}
+.busness-text:last-child {
+    margin-bottom: 0px;
+}
+
+.purpose_container {
+    border: 1px solid #E3E3E3;
+    /* margin-bottom: 31px; */
+    padding: 28px 41px 28px 38px;
+    max-width: 675px;
+}
+.purpose_container:nth-child(2) {
+    margin-bottom: 31px;
+}
+.purpose_container:nth-child(3) {
+    margin-bottom: 48px;
+}
+.purpose_title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.purpose_title::before {
+    content: "";
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    margin-right: 19px;
+    background: url(../img/Confirm.svg) 0 0 no-repeat;
+    /* vertical-align: middle; */
+    margin-bottom: -3px;
+}
+.purpose_text {
+    padding-left: 46px;
+}
+.about-us {
+    display: inline-block;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 21px 35px 22px 35px;
+    background: #6B77E5;
+}
+.about-us:hover {
+    background: #01119f;
+}
+/* ДЗ МАКЕТ №3 ====================================================================================================*/
+.how-we-work_container {
+    max-width: 1280px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 150px;
+}
+.work_process {
+    color: #37393F;
+    font-family: Inter;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.work_process::before {
+    content: "";
+    display: inline-block;
+    margin-right: 6px;
+    height: 12px;
+    width: 12px;
+    background-color: #40DDB6;
+}
+.how-we-work_title {
+    color: #37393F;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.21; /* 48.4px */
+    margin-bottom: 78px;
+}
+.content_bloks-container {
+}
+.content_block {
+    display: inline-block;
+    max-width: 390px;
+    padding: 58px 43px;
+    background: #F4F4F4;
+    margin-left: 31px;
+}
+.content_block:first-child {
+    margin-left: 0;
+}
+.content_block::before {
+    content: "";
+    display: block;
+    height: 72px;
+    width: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -96px;
+    margin-bottom: 22px;
+}
+.content_block:nth-child(1)::before {
+    background: url(../img/calendar.svg) 0 0 no-repeat;
+}
+.content_block:nth-child(2)::before {
+    background: url(../img/puzzle.svg) 0 0 no-repeat;
+}
+.content_block:nth-child(3)::before {
+    background: url(../img/confirmed.svg) 0 0 no-repeat;
+}
+.content_block-title {
+    color: #37393F;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.27; /* 31.75px */
+    margin-bottom: 16px;
+}
+.content_block-text {
+    color: #7D7D7D;
+    margin-bottom: 37px;
+}
+.content_block-ref {
+    color: #6B77E5;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.content_block-ref:hover {
+    color: #011aff;
+    text-decoration: underline;
+}
+/* ДЗ МАКЕТ №4 ====================================================================================================*/
+
+.we_doevelop-container {
+    max-width: 1254px;
+    margin: auto;
+}
+.we_doevelop-title_container {
+    max-width: 488px;
+    display: inline-block;
+    margin-top: 150px;
+}
+.we_do-title {
+    color: #000;
+    font-family: Cormorant Infant;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.15; /* 69px */
+}
+.we_do-title::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    height: 3px;
+    width: 62%;
+    background-color: #78473B;
+}
+.image_1-container {
+    width: 340px;
+    height: 385px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #000000;
+    margin-top: 30px;
+}
+.model_1 {
+    width: 334px;
+    height: 381px;
+    margin-top: 9px;
+    margin-left: 10px;
+}
+.price {
+    color: #000;
+    font-family: Cormorant Infant;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.40; /* 33.6px */
+    margin-top: 25px;
+}
+.block_image-2-container {
+    width: 350px;
+    height: 695px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 45px;
+}
+.brand_new-title {
+    color: #000;
+    font-family: Cormorant Infant;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.13; /* 51.98px */
+    margin-bottom: 31px;
+}
+.image_2-container {
+    width: 340px;
+    height: 385px;
+    vertical-align: top;
+    border: 1px solid #000000;
+}
+.model_2 {
+    width: 334px;
+    height: 381px;
+    margin-top: 9px;
+    margin-left: 10px;
+}
