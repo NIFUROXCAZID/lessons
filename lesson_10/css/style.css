@@ -1,0 +1,36 @@
+/* Підключення шрифтів */
+@import url('fonts.css');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Основні стилі */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #101010;
+    line-height: 1.46; /* 26.314px */
+}
+.header_container {
+    max-width: 856px;
+    max-height: 915px;
+    margin: auto;
+}
+.main_container {
+    padding-bottom: 100px;
+}
+/* ДОМАШНЄ ЗАВДАННЯ ==================================================================================*/
+.homework-container p {
+    margin-bottom: 25px;
+}
+.homework-container p:last-child {
+    margin-bottom: 0px;
+}
+.homework-container img {
+    /* display: block; */
+    min-width: 50px;
+    max-width: 500px;
+    background-color: #b1b1b1;
+}
