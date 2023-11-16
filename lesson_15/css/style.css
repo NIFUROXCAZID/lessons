@@ -1,0 +1,669 @@
+/* Підключення шрифтів */
+@import url('fonts.css');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Основні стилі */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #101010;
+    line-height: 1.46; /* 26.314px */
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* header шапка */
+.header {
+}
+.header--fix {
+    position: sticky; /* Ще можна fixed */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+.header__container {
+    display: flex;
+    gap: 60px;
+    padding: 35px 0px 31px 0px;
+    max-width: 1246px;
+}
+.header__container--margin {
+    margin: 0 auto;
+}
+.header__sub-container {
+    display: flex;
+    max-height: 48px;
+}
+.header__sub-container--1 {
+    min-width: 856px;
+    justify-content: space-between;
+}
+.header__sub-container--2 {
+    gap: 29px;
+}
+.header__logo {
+}
+.header__textarea {
+    display: flex;
+    gap: 12px;
+    padding: 12px 48px;
+    border-radius: 8px;
+    background: #f6f6f6;
+}
+.header__search-img {
+    width: 20px;
+    height: 20px;
+}
+.header__search-text {
+    color: #807d7e;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+}
+.header__lang {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.header__translation-text {
+    color: #333;
+    font-family: Causten;
+    font-size: 18px;
+    line-height: normal;
+}
+.header__vecotor {
+    width: 10px;
+    height: 5px;
+}
+.header__login-btn {
+    color: #fff;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 48px;
+    border-radius: 8px;
+    background: #8a33fd;
+    transition: 0.4s;
+}
+.header__login-btn:hover {
+    background: #2e0662;
+}
+.header__sign-btn {
+    color: #8a33fd;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 48px;
+    border-radius: 8px;
+    border: 1px solid #3c4242;
+    transition: 0.4s;
+}
+.header__sign-btn:hover {
+    background: #ada6b7;
+}
+/* header закінчився */
+/* main почався */
+.main {
+}
+.layout-container {
+}
+.layout-container--margin {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.block-1 {
+    padding-top: 95px;
+}
+.block-title {
+}
+.block-title--margin {
+    margin-bottom: 50px;
+}
+.block-title__text {
+    color: #3c4242;
+    font-family: Core Sans C;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 0.98; /* 98.529% */
+    letter-spacing: 0.68px;
+
+    display: inline-flex;
+    gap: 20px;
+}
+.block-title__text::before {
+    content: '';
+    flex-basis: 6px;
+    /* Додаємо width */
+    width: 6px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #8a33fd;
+    margin-top: 2px;
+}
+.products {
+}
+.product-column {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.product-item {
+    max-width: 271px;
+}
+.product-item__image {
+    margin-bottom: 18px;
+}
+.product-item__bottm-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-item__words {
+}
+.product-item__title {
+    color: #2a2f2f;
+    font-family: Causten;
+    font-weight: 700;
+    line-height: 1.56; /* 156.25% */
+    letter-spacing: -0.715px;
+}
+.product-item__slogan {
+    color: #7f7f7f;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2.08; /* 208.333% */
+    letter-spacing: -0.536px;
+}
+.product-item__ref-arrow {
+    align-self: flex-start;
+    margin-top: 12px;
+}
+.product-item__arrow {
+    width: 18px;
+    height: 15px;
+}
+/* ------------------------------- */
+.block-2 {
+    max-width: 904px;
+    padding-top: 95px;
+}
+.block-2--margin {
+    margin-left: auto;
+}
+.block-title-2 {
+}
+.block-title--margin {
+}
+.block-title-2__text {
+    color: #3c4242;
+    /* font-family: Core Sans C sans-serif; */
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.19; /* 119.643% */
+    letter-spacing: 0.68px;
+}
+.wishlist {
+}
+.wishlist__item {
+    display: flex;
+    justify-content: space-between;
+}
+.wishlist__line::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #edeef2;
+    margin-top: 30px;
+}
+.wishlist__half-1 {
+    display: inline-flex;
+    gap: 36px;
+}
+.wishlist__cross {
+}
+.wishlist__image {
+}
+.wishlist__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.wishlist__text {
+    color: #3c4242;
+    font-family: Causten;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.44px;
+}
+.wishlist__text span {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.44px;
+}
+.wishlist__half-2 {
+    display: inline-flex;
+    gap: 50px;
+    align-self: center;
+}
+.wishlist__price {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.44px;
+}
+.wishlist__price--margin {
+    margin-top: 9px;
+}
+.wishlist__button {
+    color: #fff;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background: #8a33fd;
+    transition: 0.4s;
+}
+.wishlist__button:hover {
+    background: #320b68;
+}
+/* ------------------------------- */
+.block-3 {
+    max-width: 895px;
+    padding-top: 95px;
+}
+.order {
+}
+.order:not(:first-child) {
+    margin-top: 30px;
+}
+.order__sub-info {
+    border-radius: 8px;
+    background: #f6f6f6;
+    padding: 28px 47px;
+}
+.order__number {
+    color: #3c4242;
+    font-family: Causten;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 14px;
+}
+.order__add-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+.order__right-info {
+}
+.order__info-text {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.order__info-text:not(:last-child) {
+    margin-bottom: 7px;
+}
+.order__info-text--left {
+    text-align: left;
+}
+.order__span {
+    color: #bebcbd;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+.order__left-info {
+}
+.order__info-text--right {
+    text-align: right;
+}
+.order__main-info {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.order__image {
+}
+.order__line {
+
+}
+.order__line::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #edeef2;
+    margin: 0 auto;
+}
+.order__block-main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.order__image-and-info {
+    display: flex;
+    gap: 25px;
+}
+.order__thing-name {
+    color: #3c4242;
+    font-family: Causten;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+}
+.order__thing-text {
+    color: #3c4242;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.order__thing-text span {
+    color: #bebcbd;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.order__total {
+    color: #807d7e;
+    font-family: Causten;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.order__button {
+    color: #fff;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background: #8a33fd;
+    align-self: center;
+    transition: 0.4s;
+}
+.order__button:hover {
+    background: #320b68;
+}
+
+/*=================================== Тренування Flex властивостей ============================================ */
+.training {
+    padding: 50px;
+    background-color: rgb(151, 166, 177);
+}
+.training__title {
+    text-align: center;
+    background-color: rgb(42, 134, 199);
+    font-size: 34px;
+}
+.training__text {
+    margin-top: 30px;
+    padding: 0 100px;
+    text-align: center;
+    background-color: rgb(104, 153, 190);
+}
+.block {
+    margin-top: 30px;
+    background-color: #abb726;
+    border: 5px solid rgb(195, 31, 31);
+}
+.block__item {
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #7a956b;
+    padding: 10px;
+    text-align: center;
+    border: 5px solid #77608d;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+}
+/* -------------------------- */
+
+.block--flex-1 {
+    display: flex;
+}
+.text-align {
+    text-align: center;
+}
+.block--flex-2 {
+    display: inline-flex;
+}
+.block--flex-3 {
+    max-width: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    /* gap: 35px */
+}
+.block--flex-4 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.block--flex-5 {
+    display: flex;
+    flex-direction: column;
+    /* поеревага в тому, що можна ж зручно додавати ынщы флекс властивосты для колонки все ще */
+}
+.block--flex-6 {
+    display: flex;
+    justify-content: space-evenly;
+    /* Памьятай ще що є align content, це те саме але по додатковій осі по вертикалі зазвичай */
+}
+.block--flex-7 {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+.block__item--flex-7-2 {
+    height: 100px;
+}
+.block--flex-8 {
+    display: flex;
+}
+.block__item--flex-8-1 {
+    order: 3;
+}
+.block__item--flex-8-2 {
+    order: 1;
+}
+.block__item--flex-8-3 {
+    order: 4;
+}
+.block__item--flex-8-4 {
+    order: 2;
+}
+
+.block--flex-9 {
+    height: 150px;
+    display: flex;
+}
+.block__item--flex-9-1 {
+    align-self: auto;
+}
+.block__item--flex-9-2 {
+    align-self: center;
+}
+.block__item--flex-9-3 {
+    align-self: flex-start;
+}
+.block__item--flex-9-4 {
+    align-self: flex-end;
+}
+
+.block--flex-10 {
+    display: flex;
+}
+.block__item--flex-10-1 {
+    flex-basis: auto;
+}
+.block__item--flex-10-2 {
+    flex-basis: 100px;
+}
+.block__item--flex-10-3 {
+    flex-basis: 10%;
+}
+.block__item--flex-10-4 {
+    flex-basis: 40%;
+}
+
+.block--flex-11 {
+    display: flex;
+}
+.block__item--flex-11-1 {
+    flex-grow: 0;
+}
+.block__item--flex-11-2 {
+    flex-grow: 1;
+}
+.block__item--flex-11-3 {
+    flex-grow: 0;
+}
+.block__item--flex-11-4 {
+    flex-grow: 2;
+}
+.block--flex-12 {
+    display: flex;
+    width: 200px;
+}
+.block__item--flex-12-1 {
+    width: 100px;
+    flex-shrink: 0;
+}
+.block__item--flex-12-2 {
+    width: 100px;
+    flex-shrink: 1;
+}
+.block__item--flex-12-3 {
+    width: 100px;
+    flex-shrink: 0;
+}
+.block__item--flex-12-4 {
+    width: 100px;
+    flex-shrink: 1;
+}
+.block--flex-13 {
+    display: flex;
+}
+.block__item--flex-13-1 {
+    flex: 0 0 200px;
+}
+.block__item--flex-13-2 {
+}
+.block__item--flex-13-3 {
+    flex: 0 0 200px;
+}
+.block__item--flex-13-4 {
+    flex: 1 0 50%;
+}
+.block--flex-14 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block--flex-15 {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.block--flex-16 {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+.block__item--flex-16-1 {
+}
+.block__item--flex-16-2 {
+    flex: 1 1 30%;
+}
+.block__item--flex-16-3 {
+    flex: 1 1 50%;
+}
+.block__item--flex-16-4 {
+}
+
+.block--flex-17 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.block__item--flex-17-1 {
+    flex: 0 1 50%;
+}
+.block__item--flex-17-2 {
+    flex: 0 1 50%;
+}
+.block__item--flex-17-3 {
+    flex: 0 1 50%;
+}
+.block__item--flex-17-4 {
+    flex: 0 1 50%;
+}
+
+.block--flex-18 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.block__item--flex-18-1 {
+    flex: 0 1 100%;
+}
+.block__item--flex-18-2 {
+    flex: 0 1 33.333%;
+}
+.block__item--flex-18-3 {
+    flex: 0 1 33.333%;
+}
+.block__item--flex-18-4 {
+    flex: 0 1 33.333%;
+}
+
+.block--flex-19 {
+    display: flex;
+}
+.block__item--flex-19-1 {
+    flex: 0 0 200px;
+}
+.block__item--flex-19-2 {
+    flex: 1 0 auto;
+}
+/*=================================== Тренування Flex властивостей закінчено ============================================ */
