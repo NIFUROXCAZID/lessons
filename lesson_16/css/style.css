@@ -1,0 +1,749 @@
+/* Підключення шрифтів */
+@import url('fonts.css');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Основні стилі */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #101010;
+    line-height: 1.46; /* 26.314px */
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* header шапка */
+.header {
+}
+.header--fix {
+    position: sticky; /* Ще можна fixed */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+.header__container {
+    display: flex;
+    gap: 60px;
+    padding: 35px 0px 31px 0px;
+    max-width: 1246px;
+}
+.header__container--margin {
+    margin: 0 auto;
+}
+.header__sub-container {
+    display: flex;
+    max-height: 48px;
+}
+.header__sub-container--1 {
+    min-width: 856px;
+    justify-content: space-between;
+}
+.header__sub-container--2 {
+    gap: 29px;
+}
+.header__logo {
+}
+.header__textarea {
+
+}
+.header-input {
+    display: inline-flex;
+    padding: 12px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    border-radius: 8px;
+    background: #F6F6F6;
+
+    color: #807D7E;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* ===================== */
+.header-input::placeholder {
+    /* Застосовується стиль для плейсхолдера в інпуті .header-input */
+    background: url(../img/search.svg) no-repeat;
+    background-position: left 45px center;
+}
+/* ====================== */
+.header__lang {
+}
+.header__select {
+    color: #333;
+    font-family: Causten;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../img/vector-down.svg') no-repeat;
+    background-position: right 0px center;
+}
+.header__login-btn {
+    color: #fff;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 48px;
+    border-radius: 8px;
+    background: #8a33fd;
+    transition: 0.4s;
+}
+.header__login-btn:hover {
+    background: #2e0662;
+}
+.header__sign-btn {
+    color: #8a33fd;
+    text-align: center;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 48px;
+    border-radius: 8px;
+    border: 1px solid #3c4242;
+    transition: 0.4s;
+}
+.header__sign-btn:hover {
+    background: #ada6b7;
+}
+/* header закінчився */
+/* main почався */
+.main {
+}
+.layout-container {
+}
+.layout-container--margin {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+/* ---------------макет-1---------------------- */
+
+.call-back {
+    padding-top: 95px;
+    max-width: 1222px;
+    text-align: center;
+    /* background-color: rgb(152, 167, 94); */
+}
+
+.call-back__contact {
+    color: #37393F;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 auto;
+
+    display: inline-flex;
+    gap: 6px;
+}
+.call-back__contact::before {
+    content: '';
+    flex-basis: 12px;
+    /* Додаємо width */
+    width: 12px;
+    height: 12px;
+    background-color: #40DDB6;
+    margin-top: 4px;
+}
+.call-back__title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.21; /* 48.4px */
+    margin-top: 16px;
+}
+.call-back__areas {
+    margin-top: 40px;
+}
+.callbk-form {
+}
+.call-back__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -35px;
+    justify-content: center;
+}
+.call-back__field {
+    flex: 0 1 calc(50% - 52.5px); 
+    padding: 21px 0px 22px 40px;
+    margin-bottom: 28px;
+    margin-left: 35px;
+
+    border: 1px solid #DDD;
+    background: #F8F8F8;
+    color: #37393F;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}
+.call-back__field--message {
+    resize: none;
+    flex: 0 1 calc(100% - 70px);
+    padding: 21px 0px 0px 40px;
+    min-height: 222px;
+}
+.call-back__button {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 21px 61px 22px 61px;
+    background-color: #6B77E5;
+    margin-top: 50px;
+    transition: 0.4s;
+}
+.call-back__button:hover {
+    background: #320b68;
+}
+/* ------------макет-2------------------------------------ */
+.my-info {
+    max-width: 896px;
+    padding-top: 95px;
+}
+.my-info--margin {
+    margin: 0 auto; 
+}
+.my-info__title {
+    color: #3C4242;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.19; /* 119.643% */
+    letter-spacing: 0.56px;
+}
+.my-info__sub-title {
+    color: #3C4242;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.52; /* 152.273% */
+    letter-spacing: 0.44px;
+    margin-top: 20px;
+}
+.my-inf-form {
+    margin-top: 50px;
+}
+.my-info__flex-columns {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 42px;
+    column-gap: 31px;
+}
+.input {
+
+}
+.input__feild-title, .my-info__feild-title {
+    color: #3C4242;
+    font-family: Causten;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+.input__field, .my-info__field {
+    color: #807D7E;
+    font-family: Causten;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #F6F6F6;
+    padding: 18px 22px;
+    min-width: 426px;
+}
+.input__select-styles {
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #F6F6F6;
+    max-width: 426px;
+}
+.input__field--select {
+    margin-top: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../img/down.svg') no-repeat;
+    background-position: right 22px center;
+}
+.my-info__item--textarea-margin {
+    margin-top: 31px;
+}
+.my-info__textarea {
+    resize: none;
+    min-height: 150px;
+    width: 100%;
+}
+.my-info__checkbox {
+}
+.checkbox {
+    margin-top: 6px;
+}
+.checkbox--margin {
+    margin-top: 24px;
+}
+.checkbox {
+	position: relative;
+}
+.checkbox__input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.checkbox__input:checked + .checkbox__label::before {
+	background: #3f8f15;
+    border-radius: 5px;
+}
+.checkbox__label {
+	display: inline-flex;
+	gap: 11px;
+	cursor: pointer;
+}
+.checkbox__label::before {
+	width: 21px;
+	height: 21px;
+	flex-shrink: 0;
+    margin-top: 7px;
+	background: url(../img/check-box.svg);
+	transition: background-color 0.3s;
+	content: "";
+}
+.my-info__buttons {
+    margin-top: 50px;
+    display: inline-flex;
+    gap: 30px;
+}
+.my-info__button-save {
+    padding: 12px 40px;
+    border-radius: 8px;
+    background: #8A33FD;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Causten;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    transition: 0.4s;
+}
+.my-info__button-save:hover {
+    background: #320b68;
+}
+.my-info__button-cancel {
+    padding: 12px 40px;
+    border-radius: 8px;
+    background: #F6F6F6;
+
+    color: #807D7E;
+    text-align: center;
+    font-family: Causten;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    transition: 0.4s;
+}
+.my-info__button-cancel:hover {
+    background: #9d9d9d;
+}
+/* ----------Макет-3-------------------------------------- */
+.check-out {
+    max-width: 806px;
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+.check-out--margin {
+    margin: 0 auto;
+}
+.check-out__title {
+    color: #3C4242;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.19; /* 119.643% */
+    letter-spacing: 0.56px;
+    display: inline-flex;
+    gap: 15px;
+}
+.check-out__title::before {
+    content: '';
+    flex-basis: 6px;
+    /* Додаємо width */
+    width: 6px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #8a33fd;
+    margin-top: 0px;
+}
+.check-out__subtitle {
+    color: #3C4242;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.52; /* 152.273% */
+    letter-spacing: 0.44px;
+    margin-top: 20px;
+}
+.check-out-form {
+
+}
+.check-out__flex-columns {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 42px;
+    column-gap: 32px;
+}
+.check-out__flex-rows {
+    display: flex;
+    column-gap: 32px;
+    margin-top: 28px;
+}
+.input__field--check-out-1 {
+    min-width: 382px;
+}
+.input__field--check-out-2 {
+    min-width: 246px;
+}
+.input__select-styles--check-out {
+    max-width: 246px;
+}
+.input__item--margin {
+    margin-top: 28px;
+}
+.check-out__buttons {
+    margin-top: 43px;
+}
+.check-out__button-save, .payment-method__button-pay {
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: #8A33FD;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Causten;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    transition: 0.4s;
+}
+.check-out__button-save:hover, .payment-method__button-pay:hover {
+    background: #320b68;
+}
+.check-out__checkbox {
+    margin-top: 20px;
+}
+.checkbox__label--check-out {
+    font-size: 18px;
+}
+.checkbox__label--check-out::before {
+    margin-top: 3px;
+}
+.shipping-address, .payment-method {
+    margin-top: 32px;
+}
+.shipping-address::before, .payment-method::before {
+    display: block;
+    content: '';
+    width: 840px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #EDEEF2;
+}
+.shipping-address__title, .shipping-method__title, .payment-method__title {
+    color: #3C4242;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.52; /* 152.273% */
+    letter-spacing: 0.44px;
+    margin-top: 30px;
+}
+.shipping-address__definition, .payment-method__definition {
+    color: #3C4242;
+    font-family: Causten;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+}
+.shipping-address__radio-container {
+    min-width: 840px;
+    min-height: 189px;
+    border-radius: 12px;
+    background: #F6F6F6;
+    margin-top: 30px;
+    padding: 0 48px 0 28px;
+}
+.shipping-address__radio-button-1 {
+    padding-top: 34px;
+}
+.shipping-address__radio-button-1::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #BEBCBD;
+    margin-top: 25px;
+}
+.shipping-address__radio-button-2 {
+    margin-top: 20px;
+}
+.shipping-address__radio-input {
+}
+.shipping-address__radio-input {
+    position: absolute;
+    left: -9999px; /* Ховаємо оригінальну радіокнопку і чомусь треба саме так */
+}
+.shipping-address__radio-input + label {
+    position: relative;
+    padding-left: 39px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.5; /* Змініть значення за потребою, щоб вирівнювання тексту було вірним */
+}
+.shipping-address__radio-input + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24%;
+    width: 18px;
+    height: 18px; 
+    background: url('../img/radio_button-unchecked.svg') no-repeat; /* Змініть шлях ім'я зображення за потребою */
+    transition: 0.3s;
+}
+.shipping-address__radio-input:checked + label::before {
+    background: url('../img/radio_button-checked.svg') no-repeat; /* Змініть шлях ім'я зображення за потребою */
+}
+.shipping-address__radio-label, .shipping-method__text {
+    color: #3C4242;
+    font-family: Causten;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.shipping-method {
+    margin-top: 30px;
+}
+.shipping-method::before {
+    display: block;
+    content: '';
+    width: 840px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #EDEEF2;
+}
+.shipping-method-container {
+    margin-top: 30px;
+    min-width: 840px;
+    min-height: 189px;
+    border-radius: 12px;
+    background: #F6F6F6;
+    padding: 32px 48px 0 26px;
+}
+.shipping-method__text--line::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #BEBCBD;
+    margin-top: 25px;
+}
+.shipping-method__delivery-charge-flex {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.shipping-method__sub-text {
+    color: #807D7E;
+    font-family: Causten;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 8px;
+}
+.payment-method__radio-container {
+    min-width: 840px;
+    min-height: 567px;
+    border-radius: 12px;
+    background: #F6F6F6;
+    margin-top: 30px;
+    padding: 45px 48px 45px 28px;
+}
+.payment-method__radio-button-1 {
+
+}
+/* ----- */
+.payment-method__radio-input {
+    position: absolute;
+    left: -9999px; /* Ховаємо оригінальну радіокнопку і чомусь треба саме так */
+}
+.payment-method__radio-input + label {
+    position: relative;
+    padding-left: 39px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.5; /* Змініть значення за потребою, щоб вирівнювання тексту було вірним */
+}
+.payment-method__radio-input + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 70%;
+    width: 18px;
+    height: 18px; 
+    background: url('../img/radio_button-unchecked.svg') no-repeat; /* Змініть шлях ім'я зображення за потребою */
+    transition: 0.3s;
+}
+.payment-method__radio-input--paypol + label::before {
+    top: 26%;
+}
+
+.payment-method__radio-input:checked + label::before {
+    background: url('../img/radio_button-checked.svg') no-repeat; /* Змініть шлях ім'я зображення за потребою */
+}
+.payment-method__radio-label {
+    color: #3C4242;
+    font-family: Causten;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* ============= */
+.payment-method__radio-addition {
+    color: #3C4242;
+    font-family: Causten;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 39px;
+    margin-top: 5px;
+}
+.payment-method__images {
+    margin-top: 30px;
+    margin-left: 28px;
+    display: inline-flex;
+    column-gap: 20px;
+}
+.payment-method__inputs {
+    margin-top: 28px;
+    margin-left: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 28px;
+    /* justify-content: center; */
+}
+.payment-method__input {
+}
+.payment-method__field {
+    color: #807D7E;
+    font-family: Causten;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+
+    border-radius: 8px;
+    background: #F6F6F6;
+    padding: 16px 20px;
+    border: 1px solid #3C4242;
+    min-width: 337px;
+}
+/* -- */
+.payment-method__border-lines {
+    margin-top: 30px;
+}
+.payment-method__border-lines::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #BEBCBD;
+    margin-bottom: 30px;
+}
+.payment-method__border-lines::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #BEBCBD;
+    margin-top: 30px;
+}
+/* -- */
+.payment-method__radio-button-2 {
+}
+.payment-method__radio-button-3 {
+    margin-top: 25px;
+}
+.payment-method__button-pay {
+    margin-top: 50px;
+}
+/*=================================== Тренування Фрм ============================================ */
+.training {
+    padding: 50px;
+    background-color: rgb(151, 166, 177);
+}
+.training__title {
+    text-align: center;
+    background-color: rgb(42, 134, 199);
+    font-size: 34px;
+}
+.training__text {
+    margin-top: 30px;
+    padding: 0 100px;
+    text-align: center;
+    background-color: rgb(104, 153, 190);
+}
+.block {
+    margin-top: 30px;
+    background-color: #abb726;
+    border: 5px solid rgb(195, 31, 31);
+}
+.block__item {
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #7a956b;
+    padding: 10px;
+    text-align: center;
+    border: 5px solid #77608d;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+
+/*=================================== Тренування Форм закінчено ============================================ */

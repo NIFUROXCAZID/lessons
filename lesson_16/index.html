@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 16</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header header--fix">
+            <div class="header__container header__container--margin">
+                <div class="header__sub-container header__sub-container--1">
+                    <img class="header__logo" src="img/logo.svg" alt="logo">
+                    <div class="header__textarea">
+                        <input class="header-input" minlength="2" maxlength="70" tabindex="1" name="header__input"
+                            placeholder="Seacrh" required type="text">
+                    </div>
+                    <div class="header__lang">
+                        <select name="my-info__state" id="state" class="header__select" required>
+                            <option selected value="01">English (united States)</option>
+                            <option value="02">UKR</option>
+                            <option value="03">JAPANESE</option>
+                            <option value="04">ITALY</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="header__sub-container header__sub-container--2">
+                    <a class="header__login-btn" href="#">Login</a>
+                    <a class="header__sign-btn" href="#">Sign Up</a>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="layout-container layout-container--margin">
+                <div class="call-back">
+                    <h6 class="call-back__contact">Contact Us</h6>
+                    <h2 class="call-back__title">Request A Call Back !</h2>
+                    <div class="call-back__areas">
+                        <form id="call-back__form" enctype="multipart/form-data" method="POST" class="callbk-form"
+                            action="#">
+                            <div class="call-back__container">
+                                <input class="call-back__field" minlength="2" maxlength="70" tabindex="1" name="name"
+                                    placeholder="Your Name" required type="text">
+                                <input class="call-back__field" minlength="5" maxlength="70" tabindex="2" name="email"
+                                    placeholder="Email Address" required type="email">
+                                <input class="call-back__field" minlength="6" maxlength="70" tabindex="3" name="phone"
+                                    placeholder="Phone Number" required type="tel">
+                                <input class="call-back__field" minlength="3" maxlength="70" tabindex="4" name="subject"
+                                    placeholder="Subject" required type="text">
+                                <textarea class="call-back__field call-back__field--message" name="message-cb"
+                                    id="call-back__message" placeholder="Message..."></textarea>
+                            </div>
+                            <button type="submit" class="call-back__button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="my-info my-info--margin">
+                    <h3 class="my-info__title">My Info</h3>
+                    <h4 class="my-info__sub-title">Add Address</h4>
+                    <form id="my-info__form" enctype="multipart/form-data" method="POST" class="my-inf-form" action="#">
+                        <div class="my-info__flex-columns">
+                            <div class="input">
+                                <p class="input__feild-title">First Name*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1" name="input__name"
+                                    placeholder="First Name" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Last Name*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1"
+                                    name="input__last-name" placeholder="Last Name" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Country / Region*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1"
+                                    name="input__region" placeholder="Country / Region" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Company Name</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1"
+                                    name="input__company" placeholder="Company (optional)" type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Street Address*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1"
+                                    name="input__adress" placeholder="House number and street name" required
+                                    type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Apt, suite, unit</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1" name="input__unit"
+                                    placeholder="apartment, suite, unit, etc. (optional)" type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">City*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1" name="input__city"
+                                    placeholder="Town / City" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">State*</p>
+                                <div class="input__select-styles">
+                                    <select name="input__state" id="state" class="input__field input__field--select"
+                                        required>
+                                        <option value="" disabled selected hidden>State</option>
+                                        <option value="01">Michigan</option>
+                                        <option value="02">Ohiao</option>
+                                        <option value="03">Alabama</option>
+                                        <option value="04">Mien</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input__item">
+                                <p class="input__feild-title">Phone*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1"
+                                    name="input__phone" placeholder="Phone" required type="tel">
+                            </div>
+                            <div class="input__item">
+                                <p class="input__feild-title">Postal Code*</p>
+                                <input class="input__field" minlength="2" maxlength="70" tabindex="1"
+                                    name="input__postal" placeholder="Postal Code" required type="text">
+                            </div>
+                        </div>
+                        <div class="my-info__item my-info__item--textarea-margin">
+                            <p class="my-info__feild-title">Delivery Instruction</p>
+                            <textarea class="my-info__field my-info__textarea" name="message-cb" id="my-info__textarea"
+                                placeholder="Delivery Instruction"></textarea>
+                        </div>
+                        <div class="my-info__checkbox checkbox checkbox--margin">
+                            <input class="checkbox__input" id="check" name="shipping" type="checkbox">
+                            <label class="checkbox__label" for="check">Set as default shipping address</label>
+                        </div>
+                        <div class="my-info__checkbox checkbox">
+                            <input class="checkbox__input" id="check-2" name="billing" type="checkbox">
+                            <label class="checkbox__label" for="check-2">Set as default billing address</label>
+                        </div>
+                        <div class="my-info__buttons ">
+                            <button type="submit" class="my-info__button-save">Save</button>
+                            <button type="button" class="my-info__button-cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="check-out check-out--margin">
+                    <h3 class="check-out__title">Check Out</h3>
+                    <h4 class="check-out__subtitle">Billing Details</h4>
+                    <form id="check-out__form" enctype="multipart/form-data" method="POST" class="check-out-form"
+                        action="#">
+                        <div class="check-out__flex-columns">
+                            <div class="input">
+                                <p class="input__feild-title">First Name*</p>
+                                <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__name" placeholder="First Name" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Last Name*</p>
+                                <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__last-name" placeholder="Last Name" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Country / Region*</p>
+                                <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__region" placeholder="Country / Region" required
+                                    type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Company Name</p>
+                                <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__company" placeholder="Company (optional)" type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Street Address*</p>
+                                <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__adress" placeholder="House number and street name"
+                                    required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">Apt, suite, unit</p>
+                                <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__unit"
+                                    placeholder="apartment, suite, unit, etc. (optional)" type="text">
+                            </div>
+                        </div>
+                        <div class="check-out__flex-rows">
+                            <div class="input">
+                                <p class="input__feild-title">City*</p>
+                                <input class="input__field input__field--check-out-2" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__city" placeholder="Town / City" required type="text">
+                            </div>
+                            <div class="input">
+                                <p class="input__feild-title">State*</p>
+                                <div class="input__select-styles input__select-styles--check-out">
+                                    <select name="input__state" id="state"
+                                        class="input__field input__field--check-out-2 input__field--select" required>
+                                        <option value="" disabled selected hidden>State</option>
+                                        <option value="01">Michigan</option>
+                                        <option value="02">Ohiao</option>
+                                        <option value="03">Alabama</option>
+                                        <option value="04">Mien</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input__item">
+                                <p class="input__feild-title">Postal Code*</p>
+                                <input class="input__field input__field--check-out-2" minlength="2" maxlength="70"
+                                    tabindex="1" name="input__postal" placeholder="Postal Code" required type="text">
+                            </div>
+                        </div>
+                        <div class="input__item input__item--margin">
+                            <p class="input__feild-title">Phone*</p>
+                            <input class="input__field input__field--check-out-1" minlength="2" maxlength="70"
+                                tabindex="1" name="input__phone" placeholder="Phone" required type="tel">
+                        </div>
+                        <!-- Ой наступного разу буду уважніше з перевикористанням цих блоків -->
+                        <div class="check-out__buttons ">
+                            <button type="submit" class="check-out__button-save">Continue to delivery</button>
+                        </div>
+                        <div class="check-out__checkbox checkbox">
+                            <input class="checkbox__input" id="check-3" name="faster-checkout" type="checkbox">
+                            <label class="checkbox__label checkbox__label--check-out" for="check-3">Save my information
+                                for
+                                a faster checkout</label>
+                        </div>
+                        <div class="shipping-address">
+                            <p class="shipping-address__title">Shipping Address</p>
+                            <p class="shipping-address__definition">Select the address that matches your card or payment
+                                method.</p>
+                            <div class="shipping-address__radio-container">
+                                <div class="shipping-address__radio-button-1">
+                                    <input class="shipping-address__radio-input" checked id="shipping-address-01"
+                                        name="shipping-address" value="#" type="radio">
+                                    <label class="shipping-address__radio-label" for="shipping-address-01">Same as
+                                        Billing
+                                        address</label>
+                                </div>
+                                <div class="shipping-address__radio-button-2">
+                                    <input class="shipping-address__radio-input" id="shipping-address-02"
+                                        name="shipping-address" value="#" type="radio">
+                                    <label class="shipping-address__radio-label" for="shipping-address-02">Use a
+                                        different
+                                        shipping address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-method">
+                            <p class="shipping-method__title">Shipping Method</p>
+                            <div class="shipping-method-container">
+                                <p class="shipping-method__text shipping-method__text--line">Arrives by Monday, June 7
+                                </p>
+                                <div class="shipping-method__delivery-charge-flex">
+                                    <p class="shipping-method__text">Delivery Charges</p>
+                                    <p class="shipping-method__text">$5.00</p>
+                                </div>
+                                <p class="shipping-method__sub-text">Additional fess may apply</p>
+                            </div>
+                        </div>
+                        <!-- --- -->
+                        <div class="payment-method">
+                            <p class="payment-method__title">Payment Method</p>
+                            <p class="payment-method__definition">All transactions are secure and encrypted.</p>
+                            <div class="payment-method__radio-container">
+                                <div class="payment-method__radio-button-1">
+                                    <input class="payment-method__radio-input" checked id="payment-method-01"
+                                        name="payment-method" value="#" type="radio">
+                                    <label class="payment-method__radio-label" for="payment-method-01">Same as
+                                        Credit Card</label>
+                                </div>
+                                <p class="payment-method__radio-addition">We accept all major credit cards.</p>
+                                <div class="payment-method__images">
+                                    <img src="img/g-pay.svg" alt="gpay">
+                                    <img src="img/visa.svg" alt="visa">
+                                    <img src="img/pay-pal.svg" alt="paqypal">
+                                    <img src="img/pay-pass.svg" alt="pay-pass">
+                                </div>
+                                <div class="payment-method__inputs">
+                                    <div class="payment-method__input">
+                                        <input class="payment-method__field" minlength="2" maxlength="70" tabindex="1"
+                                            name="card-number" placeholder="Card number" required type="text">
+                                    </div>
+                                    <div class="payment-method__input">
+                                        <input class="payment-method__field" minlength="2" maxlength="70" tabindex="1"
+                                            name="name-of-card" placeholder="Name of card" required type="text">
+                                    </div>
+                                    <div class="payment-method__input">
+                                        <input class="payment-method__field" minlength="2" maxlength="70" tabindex="1"
+                                            name="expiration-date" placeholder="Expiration date (MM/YY)" required
+                                            type="text">
+                                    </div>
+                                    <div class="payment-method__input">
+                                        <input class="payment-method__field" minlength="2" maxlength="70" tabindex="1"
+                                            name="security-code" placeholder="Security Code" required type="password">
+                                    </div>
+                                </div>
+                                <div class="payment-method__border-lines">
+                                    <div class="payment-method__radio-button-2">
+                                        <input class="payment-method__radio-input" id="payment-method-02"
+                                            name="payment-method" value="#" type="radio">
+                                        <label class="payment-method__radio-label" for="payment-method-02">
+                                            Cash on delivery</label>
+                                        <p class="payment-method__radio-addition">Pay with cash upon delivery.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method__radio-button-3">
+                                    <input class="payment-method__radio-input payment-method__radio-input--paypol"
+                                        id="payment-method-03" name="payment-method" value="#" type="radio">
+                                    <label class="payment-method__radio-label" for="payment-method-03">Paypol</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="payment-method__button-pay">Pay Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Тренування Форм -->
+            <div class="training">
+                <p class="training__title">Тренування форм властивостей (щось я не так впевнений)</p>
+                <div class="form__line">
+                    <!-- Тип file - додати файл (файли) 
+                        Атрибут multiple - додавання групи файлів
+                        Атрибут accept - фільтрує формати файлів (https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept)
+                    -->
+                    <label for="file">додати файл</label>
+                    <input multiple accept=".jpg, .png" id="file" name="some-file" type="file">
+                </div>
+                <div class="form__line">
+                    <!-- Тип color - поле вибору кольору -->
+                    <label for="color">Виберіть колір</label>
+                    <input id="color" name="color" type="color">
+                </div>
+                <div class="form__line">
+                    <!-- Тип search - поле пошуку -->
+                    <label for="search">Що ви шукаєте?</label>
+                    <input id="search" name="search" type="search">
+                </div>
+                <div class="form__line">
+                    <!-- Тип date - поле вибору дати -->
+                    <label for="date">Оберіть дату</label>
+                    <input id="date" name="date" type="date">
+                </div>
+                <div class="form__line">
+                    <!-- Тип range - поле вибору значення -->
+                    <label for="range">як ви сьогодні?</label>
+                    <input id="range" value="0" name="range" type="range">
+                </div>
+            </div>
+            <!-- Тренування Форм закінчено -->
+        </main>
+        <footer class="footer">
+
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
