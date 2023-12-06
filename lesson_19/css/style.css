@@ -1,0 +1,1138 @@
+/* Підключення шрифтів */
+@import url('fonts.css');
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Основні стилі */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Просто не задавай font size по замовчанню й не май проблем */
+    /* Або не забувай додавать align items: center до menu-list хедера */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #101010;
+    line-height: 1.46;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+/* Обмежуючий контейнер як зазвичай*/
+[class*='__container'] {
+    max-width: 1270px; /* 1170 + 15 + 15 */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* header шапка */
+.header {
+    /* тобто розміщюємо поверх всього на повну ширину */
+    /* Краще Sticky ніж fixced бо непотрібно потім padding зайвий */
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: rgb(192, 192, 255);
+}
+.header__container {
+    /* доповнення к контейнеру з флексом, гепом, розміщенням 3 основних елементів */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    min-height: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header__logo {
+    /* Стилі для логотипу (зверни увагу на z-index) */
+    color: #000;
+    font-family: 'Merriweather';
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
+}
+.menu {
+    /* Розтянуть так щоб займало все місце */
+    flex: 1 1 auto;
+}
+.menu__body {
+}
+.menu__list {
+    /* Флекс для списку меню (останні 2 рядки типо для крутості) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 36px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+}
+.menu__item {
+}
+.menu__link {
+    /* Стиль тексту для елемента меню */
+    font-family: 'Merriweather';
+    font-size: 20px;
+    color: #000;
+    transition: color 0.3s;
+}
+/* @media (any-hover: hover) {
+	.menu__link:hover {
+		text-decoration-line: underline;
+	}
+} */
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .menu__item:hover .menu__link {
+        text-decoration-line: underline;
+    }
+}
+.menu__item--active .menu__link {
+    /* ми підсвічюємо лінк який має клас active а наявність чи відсутність класу потім навчимося робити через js */
+    font-weight: 700;
+    color: #d58417;
+    text-decoration-line: underline;
+}
+.menu__item--parent {
+    position: relative;
+}
+.menu__item--parent .menu__link {
+    /* Флекс для того щоб стрілочку по центру відображати */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.menu__item--parent .menu__link::after {
+    /* псевдоклас для додавання стрілочки випадаючого списку */
+    content: '';
+    background: url('../img/arrow-down.png') 0 0 no-repeat;
+    flex: 0 0 16px;
+    height: 8px;
+    width: 16px;
+    transition: transform 0.3s;
+}
+@media (any-hover: hover) {
+    /* перевірка ховеру і якщо можна, то при наведенні відображення підменю */
+    .menu__item--parent:hover .sub-menu {
+        opacity: 1;
+        /* для трансформ ефекту типу воно підіймається знизу */
+        transform: translate(0px, 0px);
+        visibility: visible;
+        /* А це треба щоб при зниканні меню ми не могли його піймати */
+        pointer-events: all;
+    }
+    .menu__item--parent:hover .menu__link::after {
+        /* after після link це стрілочка й це для повертання стрілочки при наведені */
+        transform: rotate(-180deg);
+    }
+}
+.sub-menu {
+    /* абсолютно позицірнуєм підменю під посиланням, що його відкриває і ховаємо */
+    transition: all 0.3s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* паддінг щоб був простір між посиланням і підменю */
+    padding-top: 5px;
+    /* трансформ ефект щоб воно типу як підіймалось */
+    transform: translate(0px, 10%);
+    opacity: 0;
+    visibility: hidden;
+    /* Чудова властивість треба щоб ми не могли піймати меню коли воно зникає*/
+    pointer-events: none;
+}
+.sub-menu__list {
+    /* Стилі для списку підменю, колір закруглення, тінь і т д */
+    width: 200px;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(255, 147, 74, 1);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.sub-menu__item {
+}
+.sub-menu__item:not(:last-child) {
+    /* Відступ для всіх елементів списку крім останнього */
+    margin-bottom: 10px;
+}
+.sub-menu__link {
+    /* Стиль для посилання розміщеному в елементі списку */
+    color: #000;
+    font-size: 18px;
+}
+@media (any-hover: hover) {
+    .sub-menu__link:hover {
+        /* Якщо можливо то підксреслювати посилання в списку при наведенні */
+        text-decoration: underline;
+    }
+}
+.header__actions {
+    /* Заборонити контейнеру з іконками розтягуватись */
+    flex-shrink: 0;
+}
+.actions-header {
+    /* Стилі для розташування тих 2 картинок у хедері */
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    position: relative;
+    z-index: 5;
+}
+.actions-header__item {
+    /* Стилі для посилання в яке загорнута картинка з фіксованим розміром */
+    flex: 0 0 32px;
+    position: relative;
+    transition: transform 0.3s;
+}
+@media (any-hover: hover) {
+    /* При наведенні якщо це можливо то трохи збільшується */
+    .actions-header__item:hover {
+        transform: scale(1.1);
+    }
+}
+.actions-header__item img {
+    /* Картинка на всю ширину actions-header__item який в свою чергу 32 пікселі */
+    max-width: 100%;
+}
+.actions-header__item span {
+    /* стиль для кругляшку з циферкою оповіщення */
+    /* Ну тут в цілому все очеіидно */
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color: #ff3333;
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    font-size: 9px;
+    text-align: center;
+    line-height: 12px;
+}
+.icon-menu {
+    /* Це іконка для бургер адаптивного меню схована по замовчанню */
+    display: none;
+}
+@media (max-width: 960px) {
+    /* Адаптив 960 пікселів для хедеру */
+    .header__container {
+        /* мінімальна висота хедеру тепер 50 а не 100 */
+        min-height: 50px;
+    }
+    .menu__body {
+        /* Сховане сбоку меню яке буде виїзджати потім */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        /* Оверфлоу треба щоб був скрол у бургер меню дуже важливо. */
+        overflow: auto;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s;
+        padding: 80px 15px 30px 15px;
+        background-color: #f7ab78;
+    }
+    .menu__body::before {
+        /* Запобіжник щоб бургер меню не наїзджяло на іконки */
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        transition: left 0.3s;
+        background-color: #f7ab78;
+    }
+    .menu-open .menu__body,
+    .menu-open .menu__body::before {
+        left: 0;
+    }
+    .menu__list {
+        /* Перетворюємо меню на вертикальне і розташовуємо справа */
+        flex-direction: column;
+        text-align: right;
+        row-gap: 28px;
+    }
+    .menu__link {
+        /* Зменшуємо розмір шрифту для зменшення розмірів */
+        font-size: 28px;
+    }
+    .menu__item--parent .menu__link {
+        /* Робиомо посилання блоковим */
+        display: block;
+    }
+    .menu__item--parent .menu__link::after {
+        /* Прибираем стрілочку біля пункту для підменю */
+        display: none;
+    }
+    .sub-menu {
+        /* Змінюємо стиль підменю робимо його тепер видимим по замовчанню */
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 10px;
+        transform: translate(0px, 0px);
+    }
+    .sub-menu__list {
+        /* Робимо список підменю на весь екран й без закруглених країв */
+        width: 100%;
+        border-radius: 0;
+    }
+    .sub-menu__item:not(:last-child) {
+        /* Задаємо відступи пунктам підменю */
+        margin-bottom: 20px;
+    }
+    .sub-menu__link {
+        /* Змінюємо колір й розмір посилань підменю */
+        color: #000;
+        font-size: 24px;
+    }
+    .icon-menu {
+        /* Кнопка для того, щоб виїзджало меню */
+        width: 30px;
+        display: block;
+        flex: 0 0 30px;
+        height: 18px;
+        position: relative;
+        z-index: 5;
+    }
+    .icon-menu::before,
+    .icon-menu::after,
+    .icon-menu span {
+        /* Оті 3 палочки які малюють кнопку */
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+        background-color: #000;
+    }
+    /* ОТ БЛІН ПОСТРАЖДАВ ЧЕРЕЗ НЕ ОНОВЛЕНЕ СКИДАННЯ СТИЛІВ ВЗЯТИ СКИДАННЯ СТИЛІВ З ЙОГО МАКЕТУ НА МАЙБУТНЄ */
+    .icon-menu::before {
+        top: 0;
+    }
+    .icon-menu::after {
+        bottom: 0;
+    }
+    .icon-menu span {
+        top: 50%;
+        margin-top: -1px;
+    }
+    .menu-open .icon-menu span {
+        transform: scale(0);
+    }
+    .menu-open .icon-menu::before {
+        transform: rotate(-45deg);
+        top: 50%;
+        margin-top: -1px;
+    }
+    .menu-open .icon-menu::after {
+        transform: rotate(45deg);
+        bottom: 50%;
+        margin-bottom: -1px;
+    }
+}
+@media (max-width: 440px) {
+    /* Зменшення шрифту й відступів для малих екранів */
+    .header__container {
+        gap: 5px;
+    }
+    .header__logo {
+        font-size: 24px;
+    }
+    .actions-header {
+        gap: 10px;
+    }
+}
+/* Хедер й 360 рядків для красоти щоб не забувати про нього */
+/* ================ТЕПЕР ОСНОВНИЙ МАКЕТ====================== */
+/* 1 частина */
+.section-1 {
+    background-color: #FFF;
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+.section-1__container {
+    
+}
+.part-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+.part-1--margin {
+    margin-bottom: 100px;
+}
+.part-1__item {
+    max-width: 604px;
+    transition: all 0.4s;
+}
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .part-1__item:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
+.part-1__fone {
+    position: relative;
+}
+.part-1__bacground {
+	width: 100%;
+	height: 100%;
+
+	aspect-ratio: 604 / 355;
+	object-fit: cover; 
+    border-radius: 12px;
+}
+.part-1__bacground--box-shadow-1 {
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.40);
+}
+.part-1__text-zone {
+    max-width: 380px;
+    padding: 60px 0 0 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.part-1__text-1 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.67; /* 167.038% */
+    letter-spacing: 0.251px;
+
+    margin-bottom: 24px;
+}
+.part-1__text-2 {
+    color: #FFF;
+    font-family: Core Sans C;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.32; /* 132.648% */
+
+    margin-bottom: 9px;
+}
+.part-1__text-3 {
+    color: #FFF;
+    font-family: Core Sans C;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.56; /* 156.598% */
+    letter-spacing: 0.251px;
+
+    margin-bottom: 36px;
+}
+.part-1__ref {
+    color: #FFF;
+    font-family: Core Sans C;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2; /* 150.66% */
+    transition: all 0.3s;
+    border-bottom: #FFF solid 1px;
+}
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .part-1__ref:hover {
+        color: #ff5151;
+        border-bottom: #ff5252 solid 2px;
+    }
+}
+@media (max-width: 1190px) {
+    .part-1 {
+        grid-template-columns: 1fr;
+    }
+    .part-1__bacground {
+        width: 100%;
+        height: 100%;
+    
+        aspect-ratio: 604 / 355;
+        object-fit: cover; 
+        border-radius: 12px;
+    
+    }
+}
+@media (max-width: 590px) {
+    .section-1 {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    .part-1__text-zone {
+        padding: 30px 0 0 28px;
+    }
+    .part-1__text-1 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+    .part-1__text-2 {
+        font-size: 34px;
+        margin-bottom: 9px;
+    }
+    .part-1__text-3 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .part-1__ref {
+        font-size: 20px;
+    }
+}
+@media (max-width: 510px) {
+    .part-1__text-zone {
+        padding: 30px 0 0 28px;
+    }
+    .part-1__text-1 {
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+    .part-1__text-2 {
+        font-size: 24px;
+        margin-bottom: 7px;
+    }
+    .part-1__text-3 {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    .part-1__ref {
+        font-size: 14px;
+    }
+}
+/* Цей дизайнер просто -=--=-*? 2 картинки різного розміру 1 з тінью це туфта.
+Звісно я можу у фотошопі базові версії картинок підрізати але блін
+це знущання ууууу згорів  */
+/* 2 частина */
+.part-2 {
+    padding: 0 37px;
+}
+.part-2--margin {
+    margin-bottom: 95px;
+}
+.part-title {
+    color: #3C4242;
+    font-family: Core Sans C;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0.98; /* 98.529% */
+    letter-spacing: 0.68px;
+
+
+    display: inline-flex;
+    gap: 20px;
+}
+.part-title--margin {
+    margin-bottom: 70px;
+}
+.part-title::before {
+    content: '';
+    flex-basis: 6px;
+    width: 6px;
+    height: 30px;
+    background-color: #8A33FD;
+    border-radius: 10px;
+    margin-top: 1px;
+}
+.part-2__grid-zone {
+    display: grid;
+    gap: 38px;
+    /* Отут если значение меньше конейнера то надо не сильно
+    маленькое не чтоб не помещался еще 1 контейнер
+    минимум 210 НЕ 200
+    так шо с auto-fill поокуратей і autofit тоже минуси помни
+    про авторозтягивание когда не надо */
+	grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.part-2__item-grid {
+    transition: 0.4s;
+}
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .part-2__item-grid:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
+.part-2-ref-img {
+    margin-bottom: 32px;
+    display: block;
+}
+.part-2__image {
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 262 / 262;
+	border-radius: 12px;
+}
+.part-2__ref {
+    color: #3C4242;
+    font-family: Causten;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    transition: 0.3s;
+}
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .part-2__ref:hover {
+        color: #090a0a;
+        font-size: 24px;
+        text-decoration: underline;
+    }
+}
+@media (max-width: 1250px) {
+
+}
+@media (max-width: 991.98px) {
+    .part-2__grid-zone {
+        display: grid;
+        gap: 38px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+@media (max-width: 767.98px) {
+    .part-2__grid-zone {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 479.98px) {
+    .part-2 {
+        padding: 0px;
+    }
+    .part-title {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    .part-2__grid-zone {
+        display: grid;
+        gap: 38px;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .part-2-ref-img {
+        margin-bottom: 12px;
+    }
+}
+/* 3 частина */
+.part-3 {
+}
+.part-3__grid {
+    display: grid;
+    gap: 20px;
+    /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
+    grid-template-columns: repeat(6, 1fr);
+}
+.part-3__item--item-1 {
+    grid-column: 1 / 3;
+}
+.part-3__item--item-2 {
+    grid-column: 3 / 5;
+
+}.part-3__item--item-3 {
+    grid-column: 5 / 7;
+
+}.part-3__item--item-4 {
+    grid-column: 1 / 4;
+
+}.part-3__item--item-5 {
+    grid-column: 4 / 7;
+}
+.part-3__item {
+    max-width: 400px;
+    transition: all 0.3s;
+}
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .part-3__item:hover  {
+        transform: scale(1.05, 1.05);
+    }
+}
+.part-3__fone {
+    position: relative;
+}
+.part-3__image {
+	width: 100%;
+	height: 100%;
+
+	aspect-ratio: 400 / 393;
+	object-fit: cover; 
+    border-radius: 12px;
+}
+.part-3__text-zone {
+    padding: 64px 0 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.part-3__text-1 {
+    color: #FFF;
+    font-family: Core Sans C;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.37; /* 137.255% */
+    letter-spacing: 0.56px;
+
+    margin-bottom: 9px;
+}
+.part-3__text-2 {
+    color: #FFF;
+    font-family: Causten;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 10px;
+}
+.part-3__text-3 {
+    color: #FFF;
+    font-family: Causten;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 30px;
+}
+.part-3__arrow {
+    width: 33px;
+    height: 30px;
+
+    margin-bottom: 40px;
+    margin-left: 36px;
+    display: block;
+}
+.part-3__ref {
+    color: #FFF;
+    text-align: center;
+    font-family: Causten;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+@media (any-hover: hover) {
+    /* тут просто підкреслення елементу меню якщо ховер підтримуєьбся */
+    .part-3__ref:hover  {
+        transform: scale(1.1, 1.1);
+        background-color:#ffa3a3
+    }
+}
+/* -------------------------- */
+.part-3__text-zone--item-2 {
+    padding: 34px 25px 0 0;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+.part-3__limited-stock {
+    color: #FFF;
+    text-align: center;
+    font-family: Causten;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #3C4242;
+    margin-bottom: 28px;
+}
+.part-3__arrow--item-2 {
+    margin: 27px 0 30px 85px;
+    /* margin-left: 85px; */
+}
+/* -------------------------- */
+.part-3__text-zone--item-3 {
+    padding: 64px 25px 0 0;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+}
+
+.part-3__text-1--item-3,
+.part-3__text-2--item-3,
+.part-3__text-3--item-3,
+.part-3__ref--item-3 {
+    color: #3C4242;
+}
+.part-3__ref--item-3 {
+    border: 1px solid #3C4242;
+}
+/* -------------------------- */
+.part-3__item--item-4,
+.part-3__item--item-5 {
+    max-width: 610px;
+}
+.part-3__image--item-4 {
+	aspect-ratio: 610 / 393;
+}
+.part-3__text-zone--item-4 {
+    padding: 45px 120px 0 0;
+    top: 0;
+    left: auto;
+    right: 0;
+}
+.part-3__text-1--item-4 {
+    color: #3C4242;
+    font-family: Core Sans C;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.37; /* 137.255% */
+    letter-spacing: 0.64px;
+}
+.part-3__text-2--item-4 {
+    color: #3C4242;
+    font-size: 16px;
+}
+.part-3__text-3--item-4 {
+    color: #3C4242;
+    font-size: 20px;
+}
+.part-3__arrow--item-4 {
+    margin: 36px 0 43px 44px;
+}
+.part-3__ref--item-4 {
+    color: #3C4242;
+    border-radius: 4px;
+    border: 2px solid #3C4242;
+    padding: 10px 30px;
+}
+/* частина 3 адаптив */
+@media (max-width: 1200px) {
+    .part-3__grid {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+    .part-3__item--item-1 {
+        grid-column: 1 / 3;
+    }
+    .part-3__item--item-2 {
+        grid-column: 3 / 5;
+    
+    }.part-3__item--item-3 {
+        grid-column: 2 / 4;
+    
+    }.part-3__item--item-4 {
+        grid-column: 2 / 5;
+    
+    }.part-3__item--item-5 {
+        grid-column: 1 / 4;
+    }
+    .part-3__arrow--item-2 {
+        margin: 0px 0 5px 85px;
+    }
+}
+@media (max-width: 991.98px) {
+
+}
+@media (max-width: 767.98px) {
+    .part-3__grid {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    .part-3__item--item-1,
+    .part-3__item--item-2,
+    .part-3__item--item-3,
+    .part-3__item--item-4,
+    .part-3__item--item-5 {
+        grid-column: 1 / 2;
+    }
+    .part-3__arrow--item-2 {
+        margin: 0px 0 5px 85px;
+    }
+}
+@media (max-width: 580px) {
+    .part-3__text-zone--item-4 {
+        padding: 3px 15px 0 0;
+    }
+    .part-3__arrow--item-4 {
+        display: none;
+    }
+}
+@media (max-width: 479.98px) {
+    .part-3__text-zone {
+        padding: 6px 0 0 8px;
+    }
+    .part-3__text-zone--item-2 {
+        padding: 3px 25px 0 0;
+    }
+    .part-3__text-zone--item-3 {
+        padding: 3px 5px 0 0;
+    }
+    .part-3__text-zone--item-4 {
+        padding: 3px 15px 0 0;
+}
+    .part-3__arrow,
+    .part-3__arrow--item-2,
+    .part-3__arrow--item-4 {
+        display: none;
+    }
+    .part-3__text-3 {
+        margin-bottom: 10px;
+    }
+    .part-3__text-1--item-3,
+    .part-3__text-1--item-4 {
+        font-size: 22px;
+    }
+    .part-3__text-2--item-3,
+    .part-3__text-2--item-4 {
+        font-size: 12px;
+    }
+    .part-3__text-3--item-3,
+    .part-3__text-3--item-4 {
+        font-size: 16px;
+    }
+    .part-3__ref--item-3,
+    .part-3__ref--item-4 {
+        font-size: 10px;
+    }
+}
+/*=================================== Тренування Grid властивостей ============================================ */
+.training {
+    padding: 50px;
+    background-color: rgb(151, 166, 177);
+}
+.training__title {
+    text-align: center;
+    background-color: rgb(42, 134, 199);
+    font-size: 34px;
+}
+.training__text {
+    margin-top: 30px;
+    padding: 0 100px;
+    text-align: center;
+    background-color: rgb(104, 153, 190);
+}
+.block {
+    margin-top: 30px;
+    background-color: #abb726;
+    border: 5px solid rgb(195, 31, 31);
+    row-gap: 10px;
+    column-gap: 20px;
+}
+.block__item {
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #7a956b;
+    padding: 10px;
+    text-align: center;
+    border: 5px solid #77608d;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+}
+/* -------------------------- */
+.block--grid-1 {
+    display: grid;
+}
+.block--grid-2 {
+    display: inline-grid;
+}
+.block--grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.block--grid-4 {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) minmax(100px, 200px) minmax(250px, 150px);
+    grid-template-rows: minmax(100px, 110%) minmax(50px, 1fr);
+}
+.block--grid-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.block--grid-6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.block--grid-7 {
+    display: grid;
+    grid-template-columns: 250px 650px;
+    grid-template-areas:
+        'header header'
+        'sidebar content'
+        'block-1 block-2'
+        'block-3 block-4'
+        'footer footer';
+}
+.block__item--flex-2-1 {
+    grid-area: header;
+}
+.block__item--flex-2-2 {
+    grid-area: sidebar;
+}
+.block__item--flex-2-3 {
+    grid-area: content;
+}
+.block__item--flex-2-4 {
+    grid-area: block-1;
+}
+.block__item--flex-2-5 {
+    grid-area: block-2;
+}
+.block__item--flex-2-6 {
+    grid-area: block-3;
+}
+.block__item--flex-2-7 {
+    grid-area: block-4;
+}
+.block__item--flex-2-8 {
+    grid-area: footer;
+}
+.block--grid-8 {
+    display: grid;
+    grid-template: 1fr / repeat(3, 200px);
+    grid-auto-columns: 50px;
+    /* grid-auto-flow:column; */
+    /* grid-auto-rows: 100px; */
+    grid-auto-flow: row;
+}
+.block--grid-9 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+
+    justify-items: center;
+    align-items: center;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.block--grid-10 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.block__item--flex-3-1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.block__item--flex-3-2 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+.block__item--flex-3-3 {
+
+}
+.block__item--flex-3-4 {
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / 3;
+}
+.block__item--flex-3-5 {
+
+}
+
+.block--grid-11 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.block__item--flex-4-1 {
+}
+.block__item--flex-4-2 {
+    grid-column: span 2;
+}
+.block__item--flex-4-3 {
+    grid-column: span 2;
+}
+.block__item--flex-4-4 {
+}
+.block__item--flex-4-5 {
+}
+.block__item--flex-4-6 {
+    grid-column: span 4;
+}
+.block__item--flex-4-7 {
+}
+.block__item--flex-4-8 {
+}
+
+
+.block--grid-11 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+/* Дивись а тут gap псює амогуса памьятай  */
+.block__item--flex-5-1 {
+    grid-column: span 4;
+}
+.block__item--flex-5-2 {
+    grid-column: 3 / 6;
+}
+.block__item--flex-5-3 {
+    grid-column: span 6;
+    /* grid-column: 1 / 6; */
+}
+.block__item--flex-5-4 {
+    grid-column: 1 / 2;
+}
+.block__item--flex-5-5 {
+    grid-column: 4 / 5;
+}
+
+
+.block--grid-12 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.block__item--flex-6-1 {
+}
+.block__item--flex-6-2 {
+
+}
+.block__item--flex-6-3 {
+}
+.block__item--flex-6-4 {
+    /* Щоб створювати колонк на кілька рядків треба
+     ОБОВЯЗКОВО УТОЧЕЮВАТИ положення через grid-column*/
+        grid-column: 2 / 3;
+
+        grid-row: 1 / 3;
+}
+.block__item--flex-6-5 {
+}
+.block__item--flex-6-6 {
+}
+.block__item--flex-6-7 {
+}
+.block__item--flex-6-8 {
+}

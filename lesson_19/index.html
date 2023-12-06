@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 19 grid</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">Pretty Clothes</div>
+                <!-- тиж і не забував ніколи, що блоки бем можна класти 1 в 1 -->
+                <div class="menu">
+                    <div class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--active">
+                                <a href="#" class="menu__link">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Shop</a>
+                            </li>
+                            <li class="menu__item menu__item--parent">
+                                <a href="#" class="menu__link">Product</a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu__list">
+                                        <li class="sub-menu__item">
+                                            <a href="#" class="sub-menu__link">Product #1</a>
+                                        </li>
+                                        <li class="sub-menu__item">
+                                            <a href="#" class="sub-menu__link">Product #2</a>
+                                        </li>
+                                        <li class="sub-menu__item">
+                                            <a href="#" class="sub-menu__link">Product #3</a>
+                                        </li>
+                                        <li class="sub-menu__item">
+                                            <a href="#" class="sub-menu__link">Product #4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Pages</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- бляха все ще не викупаю в чому кайф від міксинів, кодуц стількиж, читати важче -->
+                <div class="header__actions actions-header">
+                    <a href="#" class="actions-header__item">
+                        <img src="img/heart.png" alt="favorite">
+                        <span>1</span>
+                    </a>
+                    <a href="#" class="actions-header__item">
+                        <img src="img/package.png" alt="cart">
+                        <span>1</span>
+                    </a>
+                    <button class="icon-menu">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="section-1">
+                <div class="section-1__container">
+                    <div class="part-1 part-1--margin">
+                        <div class="part-1__item">
+                            <div class="part-1__fone">
+                                <img class="part-1__bacground part-1__bacground--box-shadow-1" src="img/bg-1.jpg" alt="bg">
+                                <div class="part-1__text-zone">
+                                    <p class="part-1__text-1">Low Price</p>
+                                    <p class="part-1__text-2">High Coziness</p>
+                                    <p class="part-1__text-3">UPTO 50% OFF</p>
+                                    <a class="part-1__ref" href="#">Explore Items</a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="part-1__item">
+                            <div class="part-1__fone">
+                                <img class="part-1__bacground" src="img/bg-2.jpg" alt="bg">
+                                <!-- <img class="part-1__bacground" src="./img/amongla-among-us.gif" alt="bg"> -->
+                                <div class="part-1__text-zone">
+                                    <p class="part-1__text-1">Beyoung Presents</p>
+                                    <p class="part-1__text-2">Breezy Summer Style</p>
+                                    <p class="part-1__text-3">UPTO 50% OFF</p>
+                                    <a class="part-1__ref" href="#">Explore Items</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-2 part-2--margin">
+                        <h2 class="part-title part-title--margin">New Arrival</h2>
+                        <div class="part-2__grid-zone">
+                            <div class="part-2__item-grid">
+                                <a class="part-2-ref-img" href="#">
+                                    <picture>
+                                        <source srcset="img/square-model-1.webp" type="image/webp">
+                                        <img class="part-2__image" src="img/square-model-1.png" alt="guide">
+                                    </picture>
+                                </a>
+                                <a class="part-2__ref" href="#">Knitted Joggers</a>
+                            </div>
+                            <div class="part-2__item-grid">
+                                <a class="part-2-ref-img" href="#">
+                                    <picture>
+                                        <source srcset="img/square-model-2.webp" type="image/webp">
+                                        <img class="part-2__image" src="img/square-model-2.png" alt="guide">
+                                    </picture>
+                                </a>
+                                <a class="part-2__ref" href="#">Full Sleeve</a>
+                            </div>
+                            <div class="part-2__item-grid">
+                                <a class="part-2-ref-img" href="#">
+                                    <!-- <picture>
+                                        <source srcset="img/square-model-3.webp" type="image/webp">
+                                        <img class="part-2__image" src="img/square-model-3.png" alt="guide">
+                                    </picture> -->
+                                    <img class="part-2__image" src="img/crying-kitten-2.gif" alt="guide">
+                                </a>
+                                <a class="part-2__ref" href="#">Active T-Shirts</a>
+                            </div>
+                            <div class="part-2__item-grid">
+                                <a class="part-2-ref-img" href="#">
+                                    <picture>
+                                        <source srcset="img/square-model-4.webp" type="image/webp">
+                                        <img class="part-2__image" src="img/square-model-4.png" alt="guide">
+                                    </picture>
+                                </a>
+                                <a class="part-2__ref" href="#">Urban Shirts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-3">
+                        <h2 class="part-title part-title--margin">Big Saving Zone</h2>
+                        <div class="part-3__grid">
+                            <!-- ========================== -->
+                            <div class="part-3__item part-3__item--item-1">
+                                <div class="part-3__fone">
+                                    <picture>
+                                        <source srcset="img/sz-model-1.webp" type="image/webp">
+                                        <img class="part-3__image" src="img/sz-model-1.png" alt="guide">
+                                    </picture>
+                                    <div class="part-3__text-zone">
+                                        <!-- <a class="part-3__limited-stock" href="#">Limited Stock</a> -->
+                                        <p class="part-3__text-1">Hawaiian <br> Shirts</p>
+                                        <p class="part-3__text-2">Dress up in summer vibe</p>
+                                        <p class="part-3__text-3">UPTO 50% OFF</p>
+                                        <img class="part-3__arrow" src="img/arrow-down-2.svg" alt="\">
+                                        <a class="part-3__ref" href="#">SHOP NOW</a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- ========================== -->
+                            <div class="part-3__item part-3__item--item-2">
+                                <div class="part-3__fone">
+                                    <picture>
+                                        <source srcset="img/sz-model-2.webp" type="image/webp">
+                                        <img class="part-3__image" src="img/sz-model-2.png" alt="guide">
+                                    </picture>
+                                    <div class="part-3__text-zone part-3__text-zone--item-2">
+                                        <a class="part-3__limited-stock" href="#">Limited Stock</a>
+                                        <p class="part-3__text-1">Printed <br> T-Shirt</p>
+                                        <p class="part-3__text-2">New Designs Every Week</p>
+                                        <p class="part-3__text-3">UPTO 40% OFF</p>
+                                        <img class="part-3__arrow part-3__arrow--item-2" src="img/arrow-down-2.svg" alt="\">
+                                        <a class="part-3__ref" href="#">SHOP NOW</a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- ========================== -->
+                            <div class="part-3__item part-3__item--item-3">
+                                <div class="part-3__fone">
+                                    <picture>
+                                        <source srcset="img/sz-model-3.webp" type="image/webp">
+                                        <img class="part-3__image" src="img/sz-model-3.png" alt="guide">
+                                    </picture>
+                                    <div class="part-3__text-zone part-3__text-zone--item-3">
+                                        <!-- <a class="part-3__limited-stock" href="#">Limited Stock</a> -->
+                                        <p class="part-3__text-1 part-3__text-1--item-3">Cargo <br> Joggers</p>
+                                        <p class="part-3__text-2 part-3__text-2--item-3">New Designs Every Week</p>
+                                        <p class="part-3__text-3 part-3__text-3--item-3">UPTO 40% OFF</p>
+                                        <img class="part-3__arrow" src="img/arrow-down-2-black.svg" alt="\">
+                                        <a class="part-3__ref part-3__ref--item-3" href="#">SHOP NOW</a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- ========================== -->
+                            <div class="part-3__item part-3__item--item-4">
+                                <div class="part-3__fone">
+                                    <picture>
+                                        <source srcset="img/sz-model-4.webp" type="image/webp">
+                                        <img class="part-3__image part-3__image--item-4" src="img/sz-model-4.png" alt="guide">
+                                    </picture>
+                                    <!-- <img class="part-3__image part-3__image--item-4" src="./img/nicocado.jpg" alt="guide"> -->
+                                    <div class="part-3__text-zone part-3__text-zone--item-4">
+                                        <!-- <a class="part-3__limited-stock" href="#">Limited Stock</a> -->
+                                        <p class="part-3__text-1 part-3__text-1--item-4">Urban <br> Shirts</p>
+                                        <p class="part-3__text-2 part-3__text-2--item-4">Live In Confort</p>
+                                        <p class="part-3__text-3 part-3__text-3--item-4">FLAT 60% OFF</p>
+                                        <img class="part-3__arrow part-3__arrow--item-4" src="img/arrow-down-2-black.svg" alt="\">
+                                        <a class="part-3__ref part-3__ref--item-4" href="#">SHOP NOW</a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- ========================== -->
+                            <div class="part-3__item part-3__item--item-5">
+                                <div class="part-3__fone">
+                                    <picture>
+                                        <source srcset="img/sz-model-5.webp" type="image/webp">
+                                        <img class="part-3__image part-3__image--item-4" src="img/sz-model-5.png" alt="guide">
+                                    </picture>
+                                    <div class="part-3__text-zone part-3__text-zone--item-4">
+                                        <!-- <a class="part-3__limited-stock" href="#">Limited Stock</a> -->
+                                        <p class="part-3__text-1 part-3__text-1--item-4">Oversized <br> T-Shirts</p>
+                                        <p class="part-3__text-2 part-3__text-2--item-4">Live In Confort</p>
+                                        <p class="part-3__text-3 part-3__text-3--item-4">FLAT 60% OFF</p>
+                                        <img class="part-3__arrow part-3__arrow--item-4" src="img/arrow-down-2-black.svg" alt="\">
+                                        <a class="part-3__ref part-3__ref--item-4" href="#">SHOP NOW</a>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Тренування Grid властивостей -->
+            <div class="experiments">
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Всластивість disaplay Grid</p>
+                    <div class="block block--grid-1">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Всластивість inline-Grid</p>
+                    <div class="block block--grid-2">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Явна сітка 3 колонки 3 рядки fr</p>
+                    <div class="block block--grid-3">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Minmax</p>
+                    <div class="block block--grid-4">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">autofill</p>
+                    <div class="block block--grid-5">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">autofit розтягує до кінця рядка</p>
+                    <div class="block block--grid-6">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">areas</p>
+                    <div class="block block--grid-7">
+                        <div class="block__item block__item--flex-2-1">1</div>
+                        <div class="block__item block__item--flex-2-2">2</div>
+                        <div class="block__item block__item--flex-2-3">3</div>
+                        <div class="block__item block__item--flex-2-4">4</div>
+                        <div class="block__item block__item--flex-2-5">5</div>
+                        <div class="block__item block__item--flex-2-6">6</div>
+                        <div class="block__item block__item--flex-2-7">7</div>
+                        <div class="block__item block__item--flex-2-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">grid-auto приклади</p>
+                    <div class="block block--grid-8">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Justify-items, Align-items, Justify-content, Align-content</p>
+                    <div class="block block--grid-9">
+                        <div class="block__item block__item--flex-1-1">1</div>
+                        <div class="block__item block__item--flex-1-2">2</div>
+                        <div class="block__item block__item--flex-1-3">3</div>
+                        <div class="block__item block__item--flex-1-4">4</div>
+                        <div class="block__item block__item--flex-1-5">5</div>
+                        <div class="block__item block__item--flex-1-6">6</div>
+                        <div class="block__item block__item--flex-1-7">7</div>
+                        <div class="block__item block__item--flex-1-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">побудова через блоки. Корисно коли треба змістити блоки Проще через Areas</p>
+                    <div class="block block--grid-10">
+                        <div class="block__item block__item--flex-3-1">1</div>
+                        <div class="block__item block__item--flex-3-2">2</div>
+                        <div class="block__item block__item--flex-3-3">3</div>
+                        <div class="block__item block__item--flex-3-4">4</div>
+                        <div class="block__item block__item--flex-3-5">5</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">побудова через span. Проще через Areas</p>
+                    <div class="block block--grid-11">
+                        <div class="block__item block__item--flex-4-1">1</div>
+                        <div class="block__item block__item--flex-4-2">2</div>
+                        <div class="block__item block__item--flex-4-3">3</div>
+                        <div class="block__item block__item--flex-4-4">4</div>
+                        <div class="block__item block__item--flex-4-5">5</div>
+                        <div class="block__item block__item--flex-4-6">6</div>
+                        <div class="block__item block__item--flex-4-7">7</div>
+                        <div class="block__item block__item--flex-4-8">8</div>
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Амогус (Дивись а тут gap псює амогуса памьятай )</p>
+                    <div class="block block--grid-11">
+                        <div class="block__item block__item--flex-5-1">1</div>
+                        <div class="block__item block__item--flex-5-2">2</div>
+                        <div class="block__item block__item--flex-5-3">3</div>
+                        <div class="block__item block__item--flex-5-4">4</div>
+                        <div class="block__item block__item--flex-5-5">5</div>
+    
+                    </div>
+                </div>
+                <div class="training">
+                    <p class="training__title">Тренування Grid властивостей</p>
+                    <p class="training__text">Щоб створювати колонк на кілька рядків треба
+                        ОБОВЯЗКОВО УТОЧЕЮВАТИ положення через grid-column</p>
+                    <div class="block block--grid-12">
+                        <div class="block__item block__item--flex-6-1">1</div>
+                        <div class="block__item block__item--flex-6-2">2</div>
+                        <div class="block__item block__item--flex-6-3">3</div>
+                        <div class="block__item block__item--flex-6-4">4</div>
+                        <div class="block__item block__item--flex-6-5">5</div>
+                        <div class="block__item block__item--flex-6-6">6</div>
+                        <div class="block__item block__item--flex-6-7">7</div>
+                        <div class="block__item block__item--flex-6-8">8</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
