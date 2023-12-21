@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 21 SCSS частина 2 й семантика</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="just-header">ඞඞඞ АМОГУС Хедер ඞඞඞ</div>
+        </header>
+        <main class="main">
+            <div class="summer-pack">
+                <div class="summer-pack__container">
+                    <img class="summer-pack__bg" src="img/background-fone-1.jpg" alt="">
+                    <a href="#"><img class="summer-pack__arrow-right" src="img/ChevronRight.svg" alt=">"></a>
+                    <a href="#"><img class="summer-pack__arrow-left" src="img/ChevronLeft.svg" alt="<"></a>
+                    <a href="#"><img class="summer-pack__arrow-indicators" src="img/carousel-indicators.svg"
+                            alt="=="></a>
+                    <article class="summer-pack__content">
+                        <p class="summer-pack__clothes">T-shirt / Tops</p>
+                        <h2 class="summer-pack__title">Summer Value Pack</h2>
+                        <p class="summer-pack__features">cool / colorful / comfy</p>
+                        <a class="summer-pack__button" href="#">Shop Now</a>
+                    </article>
+                </div>
+            </div>
+            <div class="new-arrival">
+                <section class="new-arrival__container">
+                    <h2 class="common-title common-title__margin">New Arrival</h2>
+                    <img class="new-arrival__arr-left" src="./img/arrow-left-small.svg" alt="<">
+                    <img class="new-arrival__arr-right" src="./img/arrow-right-small.svg" alt="<">
+                    <div class="new-arrival__grid-zone">
+                        <article class="new-arrival__item">
+                            <a class="new-arrival__img-wrap" href="#">
+                                <img class="new-arrival__img" src="img/square-model-1.png" alt="item">
+                            </a>
+                            <a class="new-arrival__ref" href="#">Knitted Joggers</a>
+                        </article>
+                        <article class="new-arrival__item">
+                            <a class="new-arrival__img-wrap" href="#">
+                                <img class="new-arrival__img" src="img/square-model-1.png" alt="item">
+                            </a>
+                            <a class="new-arrival__ref" href="#">Knitted Joggers</a>
+                        </article>
+                        <article class="new-arrival__item">
+                            <a class="new-arrival__img-wrap" href="#">
+                                <img class="new-arrival__img" src="img/nicocado.jpg" alt="item">
+                            </a>
+                            <a class="new-arrival__ref" href="#">Knitted Joggers</a>
+                        </article>
+                        <article class="new-arrival__item">
+                            <a class="new-arrival__img-wrap" href="#">
+                                <img class="new-arrival__img" src="img/square-model-1.png" alt="item">
+                            </a>
+                            <a class="new-arrival__ref" href="#">Knitted Joggers</a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="day-fashion">
+                <section class="day-fashion__container">
+                    <article class="day-fashion__content-zone">
+                        <img class="day-fashion__bg-leave" src="img/black-leaves.png" alt="#">
+                        <div class="day-fashion__content">
+                            <h2 class="day-fashion__title">WE MADE YOUR EVERYDAY FASHION BETTER!</h2>
+                            <p class="day-fashion__text">In our journey to improve everyday fashion, euphoria presents
+                                EVERYDAY wear range -
+                                Comfortable & Affordable fashion 24/7</p>
+                            <a class="day-fashion__button" href="#">Shop Now</a>
+                        </div>
+                    </article>
+                    <div>
+                        <img class="day-fashion__bg-dudes" src="img/dudes.png" alt="#">
+                    </div>
+
+                </section>
+            </div>
+            <div class="categories">
+                <section class="categories__container">
+                    <h2 class="common-title common-title__margin">Categories For Men</h2>
+                    <div class="categories__grid-zone">
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <picture>
+                                    <source srcset="img/categories-for-man-1.webp" type="image/webp">
+                                    <img class="categories__image" src="img/categories-for-man-1.png" alt="clothes">
+                                </picture>
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Shirts</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <picture>
+                                    <source srcset="img/categories-for-man-1.webp" type="image/webp">
+                                    <img class="categories__image" src="img/categories-for-man-1.png" alt="clothes">
+                                </picture>
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Printed T-Shirts</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <picture>
+                                    <source srcset="img/categories-for-man-1.webp" type="image/webp">
+                                    <img class="categories__image" src="img/categories-for-man-1.png" alt="clothes">
+                                </picture>
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Plain T-Shirt</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <picture>
+                                    <source srcset="img/categories-for-man-1.webp" type="image/webp">
+                                    <img class="categories__image" src="img/categories-for-man-1.png" alt="clothes">
+                                </picture>
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Polo T-Shirt</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <!-- <picture>
+                                    <source srcset="img/categories-for-man-5.webp" type="image/webp">
+                                    <img class="for-man__image" src="img/categories-for-man-5.png" alt="clothes">
+                                </picture> -->
+                                <img class="categories__image" src="./img/amongla-among-us.gif" alt="clothes">
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">AMOGUS</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <!-- <picture>
+                                    <source srcset="img/categories-for-man-6.webp" type="image/webp">
+                                    <img class="for-man__image" src="img/categories-for-man-6.png" alt="clothes">
+                                </picture> -->
+                                <img class="categories__image" src="./img/crying-kitten-2.gif" alt="clothes">
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Jeans</a>
+                                    <p class="product__jingle">Crying kitten</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <picture>
+                                    <source srcset="img/categories-for-man-1.webp" type="image/webp">
+                                    <img class="categories__image" src="img/categories-for-man-1.png" alt="clothes">
+                                </picture>
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Activewear</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <picture>
+                                    <source srcset="img/categories-for-man-1.webp" type="image/webp">
+                                    <img class="categories__image" src="img/categories-for-man-1.png" alt="clothes">
+                                </picture>
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Boxers</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="categories">
+                <section class="categories__container">
+                    <h2 class="common-title common-title__margin">Categories For Men</h2>
+                    <div class="categories__grid-zone">
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <img class="categories__image" src="img/categories-for-woman-1.png" alt="clothes">
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Hoodies & Sweetshirt</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <img class="categories__image" src="img/amongla-among-us.gif" alt="clothes">
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Coats & Parkas</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <img class="categories__image" src="img/categories-for-woman-1.png" alt="clothes">
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Tees & T-Shirt</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                        <article class="categories__item">
+                            <a class="categories__img-wrap" href="#">
+                                <img class="categories__image" src="img/categories-for-woman-1.png" alt="clothes">
+                            </a>
+                            <div class="categories__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Boxers</a>
+                                    <p class="product__jingle">Explore Now!</p>
+                                </div>
+                                <a href="#"><img class="product__nav-arrow" src="img/arrow-right-small.svg" alt=">"></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="deal">
+                <section class="deal__container">
+                    <h2 class="deal__title">Top Brands Deal</h2>
+                    <p class="deal__proposition">Up To <mark>60%</mark> off on brands</p>
+                    <div class="deal__grid-zone">
+                        <a class="deal__brand" href="#">
+                            <img class="deal__img" src="./img/brand-1.png" alt="aids">
+                        </a>
+                        <a class="deal__brand" href="#">
+                            <img class="deal__img" src="./img/brand-1.png" alt="aids">
+                        </a>
+                        <a class="deal__brand" href="#">
+                            <img class="deal__img" src="./img/brand-1.png" alt="aids">
+                        </a>
+                        <a class="deal__brand" href="#">
+                            <img class="deal__img" src="./img/crying-kitten-2.gif" alt="aids">
+                        </a>
+                        <a class="deal__brand" href="#">
+                            <img class="deal__img" src="./img/brand-1.png" alt="aids">
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div class="limelight">
+                <section class="limelight__container">
+                    <h2 class="common-title common-title__margin">Categories For Men</h2>
+                    <div class="limelight__grid-zone">
+                        <article class="limelight__item">
+                            <a class="limelight__img-wrap" href="#">
+                                <img class="limelight__image" src="img/limelight-1.png" alt="clothes">
+                                <div class="limelight__like-bg">
+                                    <img class="limelight__like-img" src="img/like.svg" alt="like">
+                                </div>
+                            </a>
+                            <div class="limelight__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Black Sweatshirt with ....</a>
+                                    <p class="product__jingle">Jhanvi’s Brand</p>
+                                </div>
+                                <a class="product__button" href="#">$123.00</a>
+                            </div>
+                        </article>
+                        <article class="limelight__item">
+                            <a class="limelight__img-wrap" href="#">
+                                <img class="limelight__image" src="img/crying-kitten-2.gif" alt="clothes">
+                                <div class="limelight__like-bg">
+                                    <img class="limelight__like-img" src="img/like.svg" alt="like">
+                                </div>
+                            </a>
+                            <div class="limelight__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">line Pattern Black H...</a>
+                                    <p class="product__jingle">AS’s Brand</p>
+                                </div>
+                                <a class="product__button" href="#">$37.00</a>
+                            </div>
+                        </article>
+                        <article class="limelight__item">
+                            <a class="limelight__img-wrap" href="#">
+                                <img class="limelight__image" src="img/limelight-1.png" alt="clothes">
+                                <div class="limelight__like-bg">
+                                    <img class="limelight__like-img" src="img/like.svg" alt="like">
+                                </div>
+                            </a>
+                            <div class="limelight__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Black Shorts</a>
+                                    <p class="product__jingle">MM’s Brand</p>
+                                </div>
+                                <a class="product__button" href="#">$37.00</a>
+                            </div>
+                        </article>
+                        <article class="limelight__item">
+                            <a class="limelight__img-wrap" href="#">
+                                <img class="limelight__image" src="img/limelight-1.png" alt="clothes">
+                                <div class="limelight__like-bg">
+                                    <img class="limelight__like-img" src="img/like.svg" alt="like">
+                                </div>
+                            </a>
+                            <div class="limelight__product product">
+                                <div class="product__flex">
+                                    <a class="product__title" href="#">Levender Hoodie with ....</a>
+                                    <p class="product__jingle">Nike’s Brand</p>
+                                </div>
+                                <a class="product__button" href="#">$119.00</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="feedback">
+                <section class="feedback__container">
+                    <h2 class="common-title common-title__margin">Feedback</h2>
+                    <div class="feedback__grid-zone">
+                        <article class="feedback__item">
+                            <figure class="feedback__person">
+                                <div class="feedback__flex">
+                                    <a href="#"><img class="feedback__img" src="img/nicocado.jpg" alt="Floyd Miles"></a>
+                                    <div class="feedback__star-container">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_half.svg" alt="*">
+                                        <img src="img/star_outline.svg" alt="*">
+                                    </div>
+                                </div>
+                                <figcaption class="feedback__name"><a href="#">Floyd Miles</a></figcaption>
+                            </figure>
+                            <p class="feedback__text">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit
+                                mollit.
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet
+                                sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
+                                nostrud amet.
+                            </p>
+                        </article>
+                        <article class="feedback__item">
+                            <figure class="feedback__person">
+                                <div class="feedback__flex">
+                                    <a href="#"><img class="feedback__img" src="img/nicocado.jpg" alt="Floyd Miles"></a>
+                                    <div class="feedback__star-container">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_half.svg" alt="*">
+                                    </div>
+                                </div>
+                                <figcaption class="feedback__name"><a href="#">Ronald Richards</a></figcaption>
+                            </figure>
+                            <p class="feedback__text">
+                                ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+                                mollit. Exercitation veniam consequat
+                                sunt nostrud amet.
+                            </p>
+                        </article>
+                        <article class="feedback__item">
+                            <figure class="feedback__person">
+                                <div class="feedback__flex">
+                                    <a href="#"><img class="feedback__img" src="img/nicocado.jpg" alt="Floyd Miles"></a>
+                                    <div class="feedback__star-container">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_full.svg" alt="*">
+                                        <img src="img/star_half.svg" alt="*">
+                                        <img src="img/star_outline.svg" alt="*">
+                                    </div>
+                                </div>
+                                <figcaption class="feedback__name"><a href="#">Savannah Nguyen</a></figcaption>
+                            </figure>
+                            <p class="feedback__text">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit
+                                mollit.
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet
+                                sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
+                                nostrud amet.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="feedback__dots">
+                        <a href="#"><img class="feedback__dot" src="img/ellipse-gray.svg" alt="0"></a>
+                        <a href="#"><img class="feedback__dot" src="img/ellipse-black.svg" alt="0"></a>
+                        <a href="#"><img class="feedback__dot" src="img/ellipse-gray.svg" alt="0"></a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="just-footer">
+                ඞඞඞ АМОГУС Футер ඞඞඞ</div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

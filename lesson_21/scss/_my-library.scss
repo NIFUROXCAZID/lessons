@@ -1,0 +1,127 @@
+// Змінні основних медіа брейкпоінтів
+// Показуємо контент беспечно для усіх ПК моніторів
+$pc-adaptive: 1250px;
+// Показуємо контент беспечно для усіх планшетів
+$tablet-adaptive: 991.98px;
+// Показуємо контент беспечно для усіх великих мобільних
+$huge-mobile-adaptive: 767.98px;
+// Стилі для маленьких мобільних
+$small-mobile-adaptive: 479.98px;
+
+// Змінні для кольорів
+$black-color: #3c4242;
+$white-color: #fff;
+$semi-white-color: #f6f6f6;
+$grey-color: #807d7e;
+$grey-2-color: #bebcbd;
+$purple-color: #8a33fd;
+$yellow-color: #fbd103;
+
+$green-hover-color: #257a7a;
+
+// міксін для стилів по замовчанню на сторінці
+@mixin default-styles {
+    body {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #101010;
+        line-height: 1.46;
+    }
+    .wrapper {
+        min-height: 100%;
+        overflow: clip;
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper > main {
+        flex-grow: 1;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// Шаблон для хедера
+%header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+// Шаблон для футера
+%footer {
+    // ага бачиш можна аж так 1 в 1 і ще і ще вкладати
+    // Не те щоб це завжди зручно але хай тут буде як приклад
+    // Прям обєутно-орієнтоване верстання
+    @extend %header;
+    position: relative;
+    bottom: 0;
+}
+
+// Шаблон для популярного контейнера
+%common-container {
+    max-width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+// Шаблон для параметрів тексту основного заголовку
+%common-title-text {
+    color: $black-color;
+    font-family: Core Sans C;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0.98; /* 98.529% */
+    letter-spacing: 0.68px;
+}
+
+// Шаблон для параметрів назви одягу
+%clothes-title-text {
+    color: $black-color;
+    font-family: Causten;
+    font-size: 17.875px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.56; /* 156.25% */
+    letter-spacing: -0.715px;
+    border-bottom: $white-color 1px solid;
+}
+
+// Шаблон для параметрів джінгу одягу (Shop now), або бренду Jhanvi’s Brand
+%jingle-text {
+    color: $grey-color;
+    font-family: Causten;
+    font-size: 13.407px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.08; /* 208.333% */
+    letter-spacing: -0.536px;
+}
+
+// Міксин для назви з декором попереду
+@mixin common-before-title($flex-basis: 16px, $width: 16px, $height: 16px, $bgColor: null, $borderRadius: 0px) {
+    content: '';
+    flex-basis: $flex-basis;
+    width: $width;
+    height: $height;
+    @if $bgColor != null {
+        background-color: $bgColor;
+    } @else {
+        background-color: $purple-color; // Значення за замовчанням
+    }
+    border-radius: $borderRadius;
+}
+
+// Міксин для адаптивного зображення
+@mixin adaptive-image-settings($width: 100%, $height: 100%, $object-fit: cover, $aspect-ratio: 270 / 393) {
+    width: $width;
+    height: $height;
+    object-fit: $object-fit;
+    aspect-ratio: $aspect-ratio;
+}
