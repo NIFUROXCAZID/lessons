@@ -1,0 +1,159 @@
+// ееех треба було їх одразу вгору от протупашив
+// отак би зробив й функціїї працювали в міксинах та шаблонах
+// Функція для переводу пікселів у проценти
+@function percent($num1, $num2) {
+    $rez: math.div($num1, $num2) * 100%;
+    @return $rez;
+}
+
+// Функція для переводу пікселів у Rem
+@function toRem($num1, $num2: 16) {
+    $rez: math.div($num1, $num2) + rem;
+    @return $rez;
+}
+
+// Функція для переводу пікселів у Em
+@function toEm($num1, $num2: 16) {
+    $rez: math.div($num1, $num2) + em;
+    @return $rez;
+}
+
+// Змінні основних медіа брейкпоінтів
+// Показуємо контент беспечно для усіх ПК моніторів
+$pc-adaptive: 1250;
+// Показуємо контент беспечно для усіх планшетів
+$tablet-adaptive: 991.98;
+// Показуємо контент беспечно для усіх великих мобільних
+$huge-mobile-adaptive: 767.98;
+// Стилі для маленьких мобільних
+$small-mobile-adaptive: 479.98;
+
+// Змінні для кольорів
+$black-color: #3c4242;
+$black-2-color: #37393f;
+$black-3-color: #2e2f34;
+$white-color: #fff;
+$white-2-color: #f4f4f4;
+$white-3-color: #e3e3e3;
+$white-4-color: #f6f6f6;
+$white-5-color: #ddd;
+$white-6-color: #f8f8f8;
+$semi-white-color: #f6f6f6;
+$grey-color: #807d7e;
+$grey-2-color: #bebcbd;
+$grey-3-color: #b9b9b9;
+$grey-4-color: #7d7d7d;
+$grey-5-color: #c5c5c5;
+$purple-color: #8a33fd;
+$yellow-color: #fbd103;
+$yellow-2-color: #ffb342;
+$green-color: #40ddb6;
+$blue-color: #6b77e5;
+
+$green-hover-color: #28a0a0;
+
+// міксін для стилів по замовчанню на сторінці
+@mixin default-styles {
+    body {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #101010;
+        line-height: 1.46;
+    }
+    .wrapper {
+        min-height: 100vh;
+        overflow: clip;
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper > main {
+        flex-grow: 1;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// Шаблон для хедера
+%header {
+    position: sticky;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+// Шаблон для футера
+%footer {
+    @extend %header;
+    position: relative;
+    bottom: 0;
+}
+
+// Шаблон для популярного контейнера
+%common-container {
+    max-width: toRem(1250);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    margin: 0 auto;
+}
+
+// Шаблон для популярного тексту
+%default-text {
+    color: $grey-4-color;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.187%; /* 26.314px */
+}
+
+// Шаблон для тексту отого що з зеленим before
+%green-paragraph {
+    color: $white-color;
+    font-family: Inter;
+    font-size: toRem(18);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.46; /* 26.314px */
+    display: inline-flex;
+    gap: 7px;
+}
+
+// Шаблон для кнопки
+%common-btn {
+    color: $black-2-color;
+    text-align: center;
+    font-family: Inter;
+    font-size: toRem(18);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    background-color: $green-color;
+    transition: 0.3s;
+}
+
+// Міксин для адаптивного зображення
+@mixin adaptive-image-settings($width: 100%, $height: 100%, $object-fit: cover, $aspect-ratio: toRem(270) / toRem(270)) {
+    width: $width;
+    height: $height;
+    object-fit: $object-fit;
+    aspect-ratio: $aspect-ratio;
+}
+
+// Міксин для назви з декором попереду
+@mixin common-before-title($flex-basis: 11px, $width: 11px, $height: 11px, $bgColor: null, $borderRadius: 0px) {
+    content: '';
+    flex-basis: $flex-basis;
+    width: $width;
+    height: $height;
+    @if $bgColor != null {
+        background-color: $bgColor;
+    } @else {
+        background-color: $purple-color; // Значення за замовчанням
+    }
+    border-radius: $borderRadius;
+}

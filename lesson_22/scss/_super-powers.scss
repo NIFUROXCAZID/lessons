@@ -1,0 +1,130 @@
+// СУПЕР-СИЛИ SCSS ШПАРГАЛКА
+
+// Сила 1 коментарі
+/* Цей коментар типу потрапить в css  */
+// AMOGUS супер сила 1 не потрапить в SCSS
+
+// Сила 2 змінні
+$whiteColor: #fff;
+body {
+	background-color: $whiteColor;
+}
+// Хорошая мисль змінні для популярних адаптивів
+
+// Сила 3-4 Зручне копіювання класів з урахуванням вкладеності
+// Cntrl + Shift + z ну ріл краще + у нас воно ще й з коментарями
+// для зручності роботи з великим кодом.
+.menu {
+
+    &__body {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__item--active {
+    }
+
+    &__link {
+    }
+
+    &__item--parent {
+    }
+}
+.sub-menu {
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
+
+// Сила 5 шаблони
+// @extend .button;
+
+.button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: green($color: #000000);
+}
+
+.page__button {
+    @extend .button;
+    font-size: 30px;
+}
+// але краще
+%button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: green($color: #000000);
+}
+// Саме по собі з відсотком воно не попаде всередину css поки ми його не використаємо як шаблон
+
+.page__button {
+    @extend %button;
+    font-size: 30px;
+}
+
+// Сила 6 міксіни та функції
+// @mixin та @include
+
+// Це міксин він працює типо як клас або обьєкт
+@mixin box($width: 500px, $height: 500px, $bgColor: green, $borderColor: red) {
+    width: $width;
+    height: $height;
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+}
+
+// Це типу приклад використання міксину з значеннями по замовчанню
+.page__box {
+    @include box;
+}
+
+// Це типу приклад використання міксину з власними значеннями
+.about__box {
+    @include box(100px, 300px, orange, purple);
+}
+
+// Функція
+// Створюємо
+@function percent($num1, $num2) {
+    $rez: $num1 / $num2 * 100%;
+    @return $rez;
+}
+
+.test {
+    width: percent(300, 1200);
+    width: 25%; /* 300/1200 */
+}
+
+// Супер сила 7
+// Оператори
+// Зверху в файл треба дописат @use "sass:math";
+// css теж може робити (calc)
+
+// Більше інфи
+// https://sass-lang.com/documentation/operators/string
+
+// ділення math.div(num 1, num 2)
+
+.text {
+    width: 100px -50px;
+}
+// Іещі можливості
+//  if else for
+
+@for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+        $delay: ($i -1) * 0.2;
+        animation-delay: #{$delay}s;
+    }
+}
+// Приклад з циклу жені для нтч чайлд от че він не скинув свій документ а
