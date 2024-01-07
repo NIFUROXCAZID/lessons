@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Cormorant+Infant:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:regular,700,700italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Text:regular,italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  color: inherit;
+  background-color: transparent;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+mark {
+  background-color: transparent;
+}
+
+/* Google fonts */
+/* font-family: 'Cormorant Infant', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif; */
+/* Підключення вручну */
+@font-face {
+  font-family: "Causten";
+  src: url(../fonts/causten-regular.woff2) format("woff2"), url(../fonts/causten-regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url(../fonts/causten-bold.woff2) format("woff2"), url(../fonts/causten-bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ca@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");@import url("https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap");sten';
+  src: url(../fonts/causten-semi-bold.woff2) format("woff2"), url(../fonts/causten-semi-bold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url(../fonts/causten-light.woff2) format("woff2"), url(../fonts/causten-light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* Semi bold 600 як в макеті знайти не вдалось. Сподіваюсь Анджела не помітить. Все одно це вона має мені шрифти надати. */
+@font-face {
+  font-family: "Core Sans C";
+  src: url(../fonts/CoreSansC-45Regular.woff2) format("woff2"), url(../fonts/CoreSansC-45Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url(../fonts/CoreSansC-55Medium.woff2) format("woff2"), url(../fonts/CoreSansC-55Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url(../fonts/CoreSansC-65Bold.woff2) format("woff2"), url(../fonts/CoreSansC-65Bold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url(../fonts/CoreSansC-75ExtraBold.woff2) format("woff2"), url(../fonts/CoreSansC-75ExtraBold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Core Sans C";
+  src: url(../fonts/CoreSansC-85Heavy.woff2) format("woff2"), url(../fonts/CoreSansC-85Heavy.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+.header, .footer {
+  position: sticky;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #101010;
+  line-height: 1.46;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* header і футер основи */
+.header {
+  background-color: rgb(192, 192, 255);
+}
+
+.footer {
+  background-color: rgb(255, 192, 221);
+}
+
+.just-header,
+.just-footer {
+  padding: 1.875rem 0;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
