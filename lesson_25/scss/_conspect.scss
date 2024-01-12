@@ -1,0 +1,271 @@
+// Rem хорошо тим що привьязується до font size заданого html й всі розміри бере
+// відносно нього, якщо змінити той розмір шрифту зміняться всі rem розміри на сайті.
+// html {
+//     font-size: 20px;
+// }
+// .block {
+//      width: 5rem; = 100px
+// }
+//Ем залежить від успадкування якщо батьків елемент має 50px то дочірній 0.5em буде 25px
+// хороший приклад як від базового розміру 16px беретьсе rem а потім від нього ширина em
+// .em {
+// 	font-size: 2rem;
+// 	 = 16 * 2 = 32px
+// 	width: 3em;
+// 	 = 32 * 3 = 96px
+// }
+
+// Приклад адаптиву з пікселями й em можна побачити що em має переваги.
+// Зручно тим, що змінишви font-size змінюється все інше.
+// В медіазапитах em береться як rem тобто від глобального значення
+// PX
+.exmpl {
+    // .exmpl__title
+    &__title {
+        font-size: 50px;
+        margin-bottom: 20px;
+        @media (max-width: 767.98px) {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+    }
+    // .exmpl__text
+    &__text {
+    }
+}
+
+// REM + EM
+.exmpl {
+    // .exmpl__title
+    &__title {
+        font-size: toRem(50); // 50px
+        margin-bottom: toEm(20, 50); // 20px
+        @media (max-width: toEm(767.97)) {
+            // береться, як REM від глобального розміру шрифту
+            font-size: toRem(30);
+        }
+    }
+    // .exmpl__text
+    &__text {
+    }
+}
+
+// Що коли використовувати...
+// Ну тепер завжди використовувати реми тренуватись
+// Замість PX використовуємо REM
+// Але іноді:
+// Використовуємо EM коли хочемо щоб значеня
+// тих чи інших властивостей залежали від
+// поточного або успаткованого розміру шрифту об'єкту.
+// Та у медіа запитах
+// Використовуємо PX тоді, коли хочемо
+// зафіксувати значення тих чи інших властивостей
+
+// Одиниці в'юпорта VH VW VMIN VMAX
+// 1vh - 1% висоти в'юпорта
+// 1vw - 1% ширини в'юпорта
+// 1svh - 1% мінімальної висоти в'юпорта
+// 1dvh - 1% динамічної висоти в'юпорта
+// 1vmax - 1% більшої сторони (висоти або ширини)
+// 1vmin - 1% меньшої сторони (висоти або ширини)
+
+// Змінні в CSS
+
+// Змінні
+// Плюсом можна виділити модливість створення й маніпулювання css змінною через JS але це якось потім
+// Створення змінної
+// Глобальні змінні
+/*
+:root {
+	--mainColor: #000;
+}
+
+// Персональні змінні
+.block {
+	--mainColor: #000;
+
+}
+
+// Використання змінної
+
+:root {
+	--mainColor: green;
+}
+
+// Глобальні змінні
+.text {
+	color: var(--mainColor);
+}
+// Персональні змінні
+.block {
+	--mainColor: #000;
+	color: var(--mainColor);
+}
+*/
+
+// Ну це ми начебто вміємо годна річ
+// CALC  - крута штука
+.calc {
+    width: calc(50% - 30px);
+    background-color: #7a956b;
+    padding: toRem(15);
+}
+
+// CLAMP  - крута штука
+// Обьєднує min-width, width й max-width в 1 цікаво
+.clamp {
+    // width: clamp(toRem(280), 50vw, toRem(800));
+    // Коли половина вьюпорта мене 800 він зменшується але до моменту коли половина вьюпорта стане
+    // 280 а ще менше він вже не буде зменшуватись
+    background-color: #77608d;
+    padding: toRem(15);
+    // Можна вказати якусть властивість (наприклад font-size) й певні межі від яких вона має плавно
+    // переходити з 1 значення в інше наприклад (від 800 до 500 пікселів змінюємо шрифт з 40 до 18)
+    // Правда працює не дуже пока
+    @include adaptiveValue('font-size', 40, 18, 0, 800, 500);
+}
+
+// Корисно коли наприклад якийсь декоративний елемент накриває кнопки на які треба натискати
+// Використовуавали памятаеш, щоб не можна було догнати зникаюче меню
+.pointer-events {
+    pointer-events: none; // Викнено
+    pointer-events: all; // Увікнено (за замовченням)
+}
+// Зробити так щоб курсор змінювався при наведенні на натискаємий елемент
+// Видів курсорів є багато
+// cursor
+.cursor {
+    // cursor: pointer;
+    // cursor: default;
+}
+
+// Хз зачем надо но відео глянуть
+// columns (додатково)
+// https://www.youtube.com/watch?v=P4EgTuQzgd8
+
+//  :HAS,
+// Перевіряє наявність дочірнього елементу
+
+// Пояснення роботи has
+// .grid-has:has(> .grid-has__side) & {
+//     grid-column: span 2;
+// }
+// Якщо елемент з класом grid-has має дочірнім елемент grid-has__side то
+// застосувати до саме елемента (через оту &) grid-has__side стилі grid-column: span 2;
+
+.grid-has {
+    display: grid;
+    // Перевірка на підтримку has
+    @supports selector(:has(*)) {
+        &:has(> .grid-has__side) {
+            grid-template-columns: toRem(300) 1fr;
+            @media (max-width: toEm(767.98)) {
+                grid-template-columns: auto;
+            }
+        }
+    }
+
+    // .grid-has__header
+    &__header {
+        background-color: #794f45;
+        padding: toRem(15);
+        @media (min-width: toEm(767.98)) {
+            .grid-has:has(> .grid-has__side) & {
+                grid-column: span 2;
+            }
+        }
+    }
+    // .grid-has__side
+    &__side {
+        background-color: #7a956b;
+        padding: 15px;
+    }
+    // .grid-has__content
+    &__content {
+        background-color: #77608d;
+        padding: 15px;
+    }
+    // .grid-has__footer
+    &__footer {
+        background-color: #794f45;
+        padding: toRem(15);
+        @media (min-width: toEm(767.98)) {
+            .grid-has:has(> .grid-has__side) & {
+                grid-column: span 2;
+            }
+        }
+    }
+}
+
+// Отот кусок з чертогів фрілансера
+// Треба для роботи міксину
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+    @if ($startSize==0) {
+        $startSize: 0.000001;
+    }
+    @if ($minSize==0) {
+        $minSize: 0.000001;
+    }
+
+    // Для calc();
+    $addSize: math.div($startSize - $minSize, 16);
+
+    @if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
+        $widthFrom: $maxWidth;
+    }
+
+    // Брейк-поїнти в EM
+    $widthFromMedia: toEm($widthFrom);
+    $widthToMedia: toEm($widthTo);
+
+    // Формула плаваючого значення
+    // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+    $yIntersection: -$widthTo * $slope + $minSize;
+    @if ($yIntersection==0) {
+        $yIntersection: 0.000001;
+    }
+    $flyValue: #{toRem($yIntersection)}' + ' #{$slope * 100}vw;
+
+    // Отримання значення властивості
+    $propertyValue: #{'clamp(' toRem($minSize) ',' $flyValue ',' toRem($startSize) ')'};
+    // Якщо негативні значення
+    @if ($minSize > $startSize) {
+        $propertyValue: #{'clamp(' toRem($startSize) ',' $flyValue ',' toRem($minSize) ')'};
+    }
+
+    // Встановлюємо значення за замовчуванням
+    @if $keepSize != 1 and $keepSize != 3 {
+        @media (min-width: $widthFromMedia) {
+            #{$property}: toRem($startSize);
+        }
+    }
+    // Адаптуємо розмір у проміжку між зазначеними ширинами в'юпорту
+    @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+        // Якщо підтримується clamp();
+        @supports (#{$property}: $propertyValue) {
+            #{$property}: $propertyValue;
+        }
+        // Якщо не підтримується clamp();
+        @supports not (#{$property}: $propertyValue) {
+            #{$property}: calc(#{toRem($minSize)} + #{$addSize} * (100vw - #{toRem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+        }
+    }
+    @if $keepSize != 1 and $keepSize != 2 {
+        @media (max-width: $widthToMedia) {
+            #{$property}: toRem($minSize);
+        }
+    }
+}
