@@ -1,0 +1,43 @@
+@use "sass:math";
+
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_my-library.scss";
+
+@include default-styles;
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* header і футер основи */
+.header {
+  @extend %header;
+  background-color: rgb(192, 192, 255);
+}
+
+.footer {
+  @extend %footer;
+  background-color: rgb(255, 192, 221);
+}
+
+.just-header,
+.just-footer {
+  padding: toRem(30) 0;
+  text-align: center;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+body {
+  opacity: 0;
+}
+body.no-transparency {
+  opacity: 1;
+}
+
+.item {
+    background-color: $blue-color;
+    width: 200px;
+    height: 100px;
+    border: $black-3-color 1px solid;
+}
+
+.text {
+  width: 100px;
+}
